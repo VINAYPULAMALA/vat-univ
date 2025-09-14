@@ -1,72 +1,75 @@
-import React, { useState } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
+
+import { Sparkles, Camera } from "lucide-react";
 
 const Gallery: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const categories = [
-    { id: 'all', name: 'All' },
-    { id: 'campus', name: 'Campus' },
-    { id: 'facilities', name: 'Facilities' },
-    { id: 'events', name: 'Events' },
-    { id: 'students', name: 'Student Life' }
+    { id: "all", name: "All" },
+    { id: "campus", name: "Campus" },
+    { id: "facilities", name: "Facilities" },
+    { id: "events", name: "Events" },
+    { id: "students", name: "Student Life" },
   ];
 
   const images = [
     {
       id: 1,
       src: "https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      category: 'campus',
-      title: 'Main Campus Building'
+      category: "campus",
+      title: "Main Campus Building",
     },
     {
       id: 2,
       src: "https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      category: 'facilities',
-      title: 'Engineering Laboratory'
+      category: "facilities",
+      title: "Engineering Laboratory",
     },
     {
       id: 3,
       src: "https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      category: 'students',
-      title: 'Students Studying'
+      category: "students",
+      title: "Students Studying",
     },
     {
       id: 4,
       src: "https://images.pexels.com/photos/159775/library-la-trobe-study-students-159775.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      category: 'facilities',
-      title: 'University Library'
+      category: "facilities",
+      title: "University Library",
     },
     {
       id: 5,
       src: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      category: 'events',
-      title: 'Graduation Ceremony'
+      category: "events",
+      title: "Graduation Ceremony",
     },
     {
       id: 6,
       src: "https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      category: 'students',
-      title: 'Research Lab'
+      category: "students",
+      title: "Research Lab",
     },
     {
       id: 7,
       src: "https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      category: 'facilities',
-      title: 'Computer Lab'
+      category: "facilities",
+      title: "Computer Lab",
     },
     {
       id: 8,
       src: "https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      category: 'campus',
-      title: 'Campus Grounds'
-    }
+      category: "campus",
+      title: "Campus Grounds",
+    },
   ];
 
-  const filteredImages = selectedCategory === 'all' 
-    ? images 
-    : images.filter(img => img.category === selectedCategory);
+  const filteredImages =
+    selectedCategory === "all"
+      ? images
+      : images.filter((img) => img.category === selectedCategory);
 
   const openModal = (index: number) => {
     setSelectedImage(index);
@@ -84,18 +87,37 @@ const Gallery: React.FC = () => {
 
   const prevImage = () => {
     if (selectedImage !== null) {
-      setSelectedImage(selectedImage === 0 ? filteredImages.length - 1 : selectedImage - 1);
+      setSelectedImage(
+        selectedImage === 0 ? filteredImages.length - 1 : selectedImage - 1
+      );
     }
   };
 
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Campus Gallery</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our beautiful campus, modern facilities, and vibrant student life
-          </p>
+        <div className="text-center mb-16 relative group">
+          <div className="flex justify-center items-center gap-4 mb-6">
+            <Sparkles className="w-8 h-8 text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:-rotate-12" />
+            <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-400 via-amber-400 to-orange-600 bg-clip-text text-transparent relative inline-block">
+              Campus Gallery
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400/80 to-amber-200/80 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+            </h2>
+            <Sparkles className="w-8 h-8 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:rotate-12" />
+          </div>
+
+          <div className="max-w-2xl mx-auto relative">
+            <p className="text-xl text-gray-600 mb-4 font-medium">
+              <Camera className="inline-block w-6 h-6 text-orange-500 mr-2 -mt-1" />
+              Explore Our Vibrant
+              <span className="relative px-2 mx-1 bg-gradient-to-r from-amber-100 to-orange-100">
+                University Life
+                <div className="absolute inset-0 bg-white/50 mix-blend-overlay animate-pulse"></div>
+              </span>
+              Through These Moments
+            </p>
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-orange-400 to-amber-300 rounded-full opacity-30 group-hover:opacity-70 transition-opacity duration-300"></div>
+          </div>
         </div>
 
         {/* Category Filter */}
@@ -106,8 +128,8 @@ const Gallery: React.FC = () => {
               onClick={() => setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 selectedCategory === category.id
-                  ? 'bg-orange-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600'
+                  ? "bg-orange-600 text-white"
+                  : "bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600"
               }`}
             >
               {category.name}
@@ -147,14 +169,14 @@ const Gallery: React.FC = () => {
               >
                 <X className="w-8 h-8" />
               </button>
-              
+
               <button
                 onClick={prevImage}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10"
               >
                 <ChevronLeft className="w-8 h-8" />
               </button>
-              
+
               <button
                 onClick={nextImage}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10"
@@ -167,9 +189,11 @@ const Gallery: React.FC = () => {
                 alt={filteredImages[selectedImage].title}
                 className="max-w-full max-h-full object-contain"
               />
-              
+
               <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="text-xl font-semibold">{filteredImages[selectedImage].title}</h3>
+                <h3 className="text-xl font-semibold">
+                  {filteredImages[selectedImage].title}
+                </h3>
               </div>
             </div>
           </div>

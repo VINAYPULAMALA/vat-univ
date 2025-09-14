@@ -172,10 +172,9 @@ const tabs = [
 ];
 const aboutSections = [
   {
-    title: "Leading Education in Regional Australia",
+    title: "How long does the application process take?",
     description: [
-      "Orange University has been at the forefront...",
-      "Our commitment to innovation...",
+      "Our application process takes approximately 24 hours, with some applications taking longer. All applications are analyzed on a case-by-case basis, and some can be delayed due to their complexity, or the timeliness of student’s responsiveness. We can also have delays due to the high volume of applications. Please allow time for processing and understand that we cannot hurry the process. You must submit your application at least 1 month before the start of your course. We cannot accept any applications received after the cut-off dates and will not expedite applications for any reason. Also, we cannot accept offers more than six months in advance.",
     ],
     buttonText: "Discover Our Story",
     imageUrl:
@@ -183,10 +182,9 @@ const aboutSections = [
     stats: [],
   },
   {
-    title: "Innovation for the Future",
+    title: "How will I know if my application has been processed?",
     description: [
-      "We’re shaping the next generation of leaders...",
-      "Students learn in world-class facilities...",
+      "Our Marketing staff will help you through the application process and provide you with updates. If your application is successful, you will receive an offer letter via email.",
     ],
     buttonText: "Explore Our Vision",
     imageUrl:

@@ -124,6 +124,7 @@ const Header: React.FC = () => {
     },
     {
       label: 'HOW TO APPLY',
+      href: '/howtoapply',
       dropdown: [
         {
           label: 'Application Process',
