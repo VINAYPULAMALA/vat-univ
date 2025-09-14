@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Calendar } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Calendar, Sparkles, Camera } from 'lucide-react';
 
 const ReachOut: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -67,11 +67,28 @@ const ReachOut: React.FC = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Have questions about Orange University? We're here to help you every step of the way
-          </p>
+        <div className="text-center mb-16 relative group">
+          <div className="flex justify-center items-center gap-4 mb-6">
+            <Sparkles className="w-8 h-8 text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:-rotate-12" />
+            <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-400 via-amber-400 to-orange-600 bg-clip-text text-transparent relative inline-block">
+              Get in Touch
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400/80 to-amber-200/80 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+            </h2>
+            <Sparkles className="w-8 h-8 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:rotate-12" />
+          </div>
+
+          <div className="max-w-2xl mx-auto relative">
+            <p className="text-xl text-gray-600 mb-4 font-medium">
+              <Camera className="inline-block w-6 h-6 text-orange-500 mr-2 -mt-1" />
+              Have questions about
+              <span className="relative px-2 mx-1 bg-gradient-to-r from-amber-100 to-orange-100">
+                Orange University?
+                <div className="absolute inset-0 bg-white/50 mix-blend-overlay animate-pulse"></div>
+              </span>
+              We're here to help you every step of the way
+            </p>
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-orange-400 to-amber-300 rounded-full opacity-30 group-hover:opacity-70 transition-opacity duration-300"></div>
+          </div>
         </div>
 
         {/* Quick Contact Methods */}

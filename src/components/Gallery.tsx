@@ -32,7 +32,7 @@ const Gallery: React.FC = () => {
       id: 3,
       src: "https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       category: "students",
-      title: "Students Studying",
+      title: "Studying",
     },
     {
       id: 4,
@@ -121,18 +121,32 @@ const Gallery: React.FC = () => {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-                selectedCategory === category.id
-                  ? "bg-orange-600 text-white"
-                  : "bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600"
-              }`}
+              className={`relative overflow-hidden px-8 py-3 rounded-full font-medium transition-all duration-300 group
+                ${
+                  selectedCategory === category.id
+                    ? 'bg-gradient-to-r from-orange-400 to-amber-300 shadow-lg shadow-orange-200'
+                    : 'bg-white/90 backdrop-blur-sm text-gray-600 hover:bg-white hover:shadow-md'
+                }`
+              }
             >
-              {category.name}
+              <span className={`relative z-10 ${
+                selectedCategory === category.id ? 'text-white' : 'text-gray-700'
+              }`}>
+                {category.name}
+              </span>
+              
+              {/* Active state glow */}
+              {selectedCategory === category.id && (
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-200/30 to-transparent mix-blend-screen"></div>
+              )}
+              
+              {/* Hover effect */}
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
           ))}
         </div>

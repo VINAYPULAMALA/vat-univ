@@ -270,7 +270,7 @@ const Header: React.FC = () => {
         }
       ]
     },
-    {
+      {
       label: 'CONTACT',
       href: '#contact'
     }

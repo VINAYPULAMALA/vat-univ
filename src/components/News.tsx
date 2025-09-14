@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Sparkles, Camera } from 'lucide-react';
 
 const News: React.FC = () => {
   const newsItems = [
@@ -29,16 +29,34 @@ const News: React.FC = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest News & Events</h2>
-          <p className="text-xl text-gray-600">Stay up to date with the latest from Orange University</p>
+        <div className="text-center mb-16 relative group">
+          <div className="flex justify-center items-center gap-4 mb-6">
+            <Sparkles className="w-8 h-8 text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:-rotate-12" />
+            <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-400 via-amber-400 to-orange-600 bg-clip-text text-transparent relative inline-block">
+              Latest News & Events
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400/80 to-amber-200/80 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+            </h2>
+            <Sparkles className="w-8 h-8 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:rotate-12" />
+          </div>
+
+          <div className="max-w-2xl mx-auto relative">
+            <p className="text-xl text-gray-600 mb-4 font-medium">
+              <Camera className="inline-block w-6 h-6 text-orange-500 mr-2 -mt-1" />
+              Stay up to date with the latest from
+              <span className="relative px-2 mx-1 bg-gradient-to-r from-amber-100 to-orange-100">
+                Orange University
+                <div className="absolute inset-0 bg-white/50 mix-blend-overlay animate-pulse"></div>
+              </span>
+            </p>
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-orange-400 to-amber-300 rounded-full opacity-30 group-hover:opacity-70 transition-opacity duration-300"></div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newsItems.map((item, index) => (
             <article key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
               <div 
-                className="h-48 bg-cover bg-center"
+                className="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
                 style={{ backgroundImage: `url(${item.image})` }}
               ></div>
               <div className="p-6">

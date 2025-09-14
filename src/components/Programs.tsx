@@ -46,7 +46,7 @@ const Programs: React.FC = () => {
           </div>
           
           <div className="max-w-2xl mx-auto relative">
-            <p className="text-xl text-gray-600 mb-4 font-medium">
+            <div className="text-xl text-gray-600 mb-4 font-medium">
               <GraduationCap className="inline-block w-6 h-6 text-orange-500 mr-2 -mt-1" />
               Shape Your Future with Our 
               <span className="relative px-2 mx-1 bg-gradient-to-r from-amber-100 to-orange-100">
@@ -54,7 +54,7 @@ const Programs: React.FC = () => {
                 <div className="absolute inset-0 bg-white/50 mix-blend-overlay animate-pulse"></div>
               </span> 
               Programs
-            </p>
+            </div>
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-orange-400 to-amber-300 rounded-full opacity-30 group-hover:opacity-70 transition-opacity duration-300"></div>
           </div>
         </div>
