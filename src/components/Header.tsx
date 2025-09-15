@@ -21,6 +21,7 @@ const Header: React.FC = () => {
   const [showReachOutModal, setShowReachOutModal] = useState(false);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const subDropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   const menuItems: MenuItem[] = [
     {
@@ -270,7 +271,7 @@ const Header: React.FC = () => {
         }
       ]
     },
-      {
+    {
       label: 'CONTACT',
       href: '#contact'
     }
@@ -314,6 +315,20 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  // ✅ Scroll listener to update background + text color
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       {/* Top bar */}
@@ -346,13 +361,13 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main header */}
-      <header className="bg-white shadow-md relative z-50">
+      <header className={`shadow-md relative z-50 sticky top-0 transition-all duration-300 ${scrolled ? 'bg-gradient-to-r from-orange-500 to-red-500' : 'bg-white'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-5">
+          <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center transform hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 text-transparent bg-clip-text">Orange</div>
-              <div className="ml-2 text-sm text-gray-600 border-l-2 border-orange-200 pl-2">
+              <div className={`text-3xl font-bold bg-clip-text ${scrolled ? 'text-white' : 'bg-gradient-to-r from-orange-600 to-orange-500 text-transparent'}`}>Orange</div>
+              <div className={`ml-2 text-sm border-l-2 border-orange-200 pl-2 ${scrolled ? 'text-white border-orange-300' : 'text-gray-600'}`}>
                 <div className="font-semibold">UNIVERSITY</div>
                 <div className="text-xs tracking-wider">AUSTRALIA</div>
               </div>
@@ -369,14 +384,14 @@ const Header: React.FC = () => {
                 >
                   <a
                     href={item.href || (item.label === 'OUR COURSES' ? '/courses' : '#')}
-                    className="text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 px-4 py-2 rounded-lg hover:bg-orange-50 flex items-center group-hover:shadow-sm"
+                    className={`font-medium transition-all duration-300 px-4 py-2 rounded-lg hover:bg-orange-50 flex items-center group-hover:shadow-sm ${scrolled ? 'text-white hover:text-orange-200' : 'text-gray-700 hover:text-orange-600'}`}
                   >
                     {item.label}
-                    {item.dropdown && <ChevronDown className="ml-1 w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" />}
+                    {item.dropdown && <ChevronDown className={`ml-1 w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300 ${scrolled ? 'text-white' : 'text-gray-700'}`} />}
                   </a>
                   {/* Dropdown */}
                   {item.dropdown && activeDropdown === item.label && (
-                    <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 ease-out">
                       {item.dropdown.map((dropdownItem) => (
                         <div
                           key={dropdownItem.label}
@@ -394,7 +409,7 @@ const Header: React.FC = () => {
 
                           {/* Sub-dropdown */}
                           {dropdownItem.subItems && activeSubDropdown === dropdownItem.label && (
-                            <div className="absolute top-0 left-full ml-1 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                            <div className="absolute top-0 left-full ml-1 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 ease-out">
                               {dropdownItem.subItems.map((subItem) => (
                                 <a
                                   key={subItem.label}
@@ -416,15 +431,15 @@ const Header: React.FC = () => {
 
             {/* Search and Mobile Menu */}
             <div className="flex items-center space-x-4">
-              <Search className="w-6 h-6 text-gray-600 cursor-pointer hover:text-orange-600 transition-colors" />
+              <Search className={`w-6 h-6 cursor-pointer transition-colors ${scrolled ? 'text-white hover:text-orange-200' : 'text-gray-600 hover:text-orange-600'}`} />
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="lg:hidden p-2"
               >
                 {isMenuOpen ? (
-                  <X className="w-6 h-6 text-gray-600" />
+                  <X className={`w-6 h-6 ${scrolled ? 'text-white' : 'text-gray-600'}`} />
                 ) : (
-                  <Menu className="w-6 h-6 text-gray-600" />
+                  <Menu className={`w-6 h-6 ${scrolled ? 'text-white' : 'text-gray-600'}`} />
                 )}
               </button>
             </div>
@@ -433,13 +448,13 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 max-h-96 overflow-y-auto">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 max-h-96 overflow-y-auto transform transition-all duration-300 ease-out opacity-100 translate-y-0">
             <nav className="px-4 py-4 space-y-2">
               {menuItems.map((item) => (
                 <div key={item.label}>
                   <a
-                    href={item.href || '#'}
-                    className="block text-gray-700 hover:text-orange-600 font-medium py-3 px-2 border-b border-gray-100"
+                    href={item.href || '#'} 
+                    className={`block font-medium py-3 px-2 border-b border-gray-100 ${scrolled ? 'text-white hover:text-orange-200' : 'text-gray-700 hover:text-orange-600'}`}
                   >
                     {item.label}
                   </a>
@@ -454,7 +469,7 @@ const Header: React.FC = () => {
                 </button>
                 <button 
                   onClick={() => setShowReachOutModal(true)}
-                  className="w-full border border-orange-600 text-orange-600 py-3 px-4 rounded-lg font-medium hover:bg-orange-50 transition-colors"
+                  className="w-full bg-gray-100 text-gray-700 py-3 px-4 rounded-lg font-medium hover:bg-gray-200 transition-colors"
                 >
                   Reach Out
                 </button>
@@ -463,195 +478,6 @@ const Header: React.FC = () => {
           </div>
         )}
       </header>
-
-      {/* Apply Online Modal */}
-      {showApplyModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">Apply Online</h2>
-                <button
-                  onClick={() => setShowApplyModal(false)}
-                  className="text-gray-400 hover:text-gray-600"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-              
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="(02) 1234 5678"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Program of Interest *
-                  </label>
-                  <select
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  >
-                    <option value="">Select a program</option>
-                    <option value="undergraduate">Undergraduate</option>
-                    <option value="postgraduate">Postgraduate</option>
-                    <option value="research">Research</option>
-                    <option value="international">International Program</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Additional Information
-                  </label>
-                  <textarea
-                    rows={3}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="Tell us more about your interests..."
-                  ></textarea>
-                </div>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-orange-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
-                >
-                  Submit Application
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Reach Out Modal */}
-      {showReachOutModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">Reach Out</h2>
-                <button
-                  onClick={() => setShowReachOutModal(false)}
-                  className="text-gray-400 hover:text-gray-600"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-              
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="Your name"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="What can we help you with?"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    rows={4}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="Your message..."
-                  ></textarea>
-                </div>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-orange-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
-                >
-                  Send Message
-                </button>
-              </form>
-              
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-4">Other Ways to Reach Us</h3>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center">
-                    <Phone className="w-4 h-4 text-orange-600 mr-3" />
-                    <span>(02) 6365 7500</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Mail className="w-4 h-4 text-orange-600 mr-3" />
-                    <span>info@orange.edu.au</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Floating Reach Out Button */}
-      <button
-        onClick={() => setShowReachOutModal(true)}
-        className="fixed bottom-6 right-6 bg-orange-600 text-white p-4 rounded-full shadow-lg hover:bg-orange-700 transition-colors z-40"
-      >
-        <Mail className="w-6 h-6" />
-      </button>
     </>
   );
 };

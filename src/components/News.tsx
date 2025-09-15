@@ -27,7 +27,7 @@ const News: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 bg-gradient-to-b from-white via-orange-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 relative group">
           <div className="flex justify-center items-center gap-4 mb-6">
@@ -39,7 +39,7 @@ const News: React.FC = () => {
             <Sparkles className="w-8 h-8 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:rotate-12" />
           </div>
 
-          <div className="max-w-2xl mx-auto relative">
+          <div className="max-w-2xl mx-auto relative ">
             <p className="text-xl text-gray-600 mb-4 font-medium">
               <Camera className="inline-block w-6 h-6 text-orange-500 mr-2 -mt-1" />
               Stay up to date with the latest from
