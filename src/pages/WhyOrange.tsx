@@ -108,7 +108,7 @@ const WhyOrange = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2 space-y-8">
               <h2 className="text-4xl font-bold text-gray-900">
-                Multicultural Support & Student Well-Being
+                Multicultural Support & Student
               </h2>
               <div className="space-y-6">
                 {wellbeingFeatures.map((feature, index) => {
