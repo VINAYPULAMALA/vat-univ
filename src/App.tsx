@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import CoursesPage from './pages/CoursesPage';
 import WhyOrange from './pages/WhyOrange';
 import HowToApply from './pages/HowToApply';
+import Carpentry from './pages/Carpentry';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="/WhyOrange" element={<WhyOrange />} />
         <Route path="/HowToApply" element={<HowToApply />} />
-
+<Route path="/carpentry" element={<Carpentry />} />
       </Routes>
       <Footer />
     </div>

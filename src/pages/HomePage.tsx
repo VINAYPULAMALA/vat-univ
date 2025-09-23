@@ -2,7 +2,6 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Programs from '../components/Programs';
 import About from '../components/About';
-import Library from '../components/Library';
 import Gallery from '../components/Gallery';
 import Facilities from '../components/Facilities';
 import Testimonials from '../components/Testimonials';
@@ -31,7 +30,6 @@ const HomePage = () => (
         { icon: Trophy, number: "50+", label: "Years Excellence" }
       ]}
     />
-    <Library />
     <Gallery />
     <Facilities />
     <Testimonials />
