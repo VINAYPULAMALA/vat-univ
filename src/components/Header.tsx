@@ -184,66 +184,66 @@ const Header: React.FC = () => {
         }
       ]
     },
-    {
-      label: 'COMMUNITY',
-      dropdown: [
-        {
-          label: 'Student Life',
-          href: '#',
-          subItems: [
-            { label: 'Clubs & Societies', href: '#' },
-            { label: 'Sports & Recreation', href: '#' },
-            { label: 'Cultural Events', href: '#' },
-            { label: 'Student Government', href: '#' },
-            { label: 'Volunteer Opportunities', href: '#' }
-          ]
-        },
-        {
-          label: 'Alumni Network',
-          href: '#',
-          subItems: [
-            { label: 'Alumni Directory', href: '#' },
-            { label: 'Networking Events', href: '#' },
-            { label: 'Mentorship Program', href: '#' },
-            { label: 'Career Services', href: '#' },
-            { label: 'Alumni Benefits', href: '#' }
-          ]
-        },
-        {
-          label: 'Industry Partnerships',
-          href: '#',
-          subItems: [
-            { label: 'Corporate Partners', href: '#' },
-            { label: 'Internship Programs', href: '#' },
-            { label: 'Research Collaborations', href: '#' },
-            { label: 'Guest Lectures', href: '#' },
-            { label: 'Job Placement', href: '#' }
-          ]
-        },
-        {
-          label: 'Community Engagement',
-          href: '#',
-          subItems: [
-            { label: 'Local Partnerships', href: '#' },
-            { label: 'Community Projects', href: '#' },
-            { label: 'Public Lectures', href: '#' },
-            { label: 'Outreach Programs', href: '#' },
-            { label: 'Social Impact', href: '#' }
-          ]
-        },
-        {
-          label: 'Events & News',
-          href: '#',
-          subItems: [
-            { label: 'Upcoming Events', href: '#' },
-            { label: 'News & Updates', href: '#' },
-            { label: 'Press Releases', href: '#' },
-            { label: 'Media Coverage', href: '#' },
-            { label: 'Newsletter', href: '#' }
-          ]
-        }
-      ]
-    },
+    // {
+    //   label: 'COMMUNITY',
+    //   dropdown: [
+    //     {
+    //       label: 'Student Life',
+    //       href: '#',
+    //       subItems: [
+    //         { label: 'Clubs & Societies', href: '#' },
+    //         { label: 'Sports & Recreation', href: '#' },
+    //         { label: 'Cultural Events', href: '#' },
+    //         { label: 'Student Government', href: '#' },
+    //         { label: 'Volunteer Opportunities', href: '#' }
+    //       ]
+    //     },
+    //     {
+    //       label: 'Alumni Network',
+    //       href: '#',
+    //       subItems: [
+    //         { label: 'Alumni Directory', href: '#' },
+    //         { label: 'Networking Events', href: '#' },
+    //         { label: 'Mentorship Program', href: '#' },
+    //         { label: 'Career Services', href: '#' },
+    //         { label: 'Alumni Benefits', href: '#' }
+    //       ]
+    //     },
+    //     {
+    //       label: 'Industry Partnerships',
+    //       href: '#',
+    //       subItems: [
+    //         { label: 'Corporate Partners', href: '#' },
+    //         { label: 'Internship Programs', href: '#' },
+    //         { label: 'Research Collaborations', href: '#' },
+    //         { label: 'Guest Lectures', href: '#' },
+    //         { label: 'Job Placement', href: '#' }
+    //       ]
+    //     },
+    //     {
+    //       label: 'Community Engagement',
+    //       href: '#',
+    //       subItems: [
+    //         { label: 'Local Partnerships', href: '#' },
+    //         { label: 'Community Projects', href: '#' },
+    //         { label: 'Public Lectures', href: '#' },
+    //         { label: 'Outreach Programs', href: '#' },
+    //         { label: 'Social Impact', href: '#' }
+    //       ]
+    //     },
+    //     {
+    //       label: 'Events & News',
+    //       href: '#',
+    //       subItems: [
+    //         { label: 'Upcoming Events', href: '#' },
+    //         { label: 'News & Updates', href: '#' },
+    //         { label: 'Press Releases', href: '#' },
+    //         { label: 'Media Coverage', href: '#' },
+    //         { label: 'Newsletter', href: '#' }
+    //       ]
+    //     }
+    //   ]
+    // },
     {
       label: 'INFORMATION',
       dropdown: [
@@ -272,7 +272,7 @@ const Header: React.FC = () => {
       ]
     },
     {
-      label: 'CONTACT',
+      label: 'ENQUIRE  NOW',
       href: '#contact'
     }
   ];
