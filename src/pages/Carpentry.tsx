@@ -1,7 +1,7 @@
 import React from "react";
 import ApplyForm from "../components/ApplyForm";
 import { User, Globe, BookOpen } from "lucide-react";
-import {TestEvidenceTable} from "../components/StepTimelineWithIcons";
+import { TestEvidenceTable } from "../components/StepTimelineWithIcons";
 
 interface Unit {
   no: number;
@@ -26,35 +26,33 @@ const Carpentry: React.FC = () => {
 
   const courseDetails = [
     {
-      label: "Student",
-      value: "Apprenticeship",
+      label: "AQF Level 3",
+      value: "Qualification Code CPC30220",
     },
     {
-      label: "Campus locations",
-      value:
-        "On the job training with the employer and/or Multiple locations (Refer to NSW Training Locations) *",
-      isLink: true,
+      label: "Qualification Title",
+      value: "Certificate III in Carpentry",
+      isLink: false,
       linkText: "Refer to NSW Training Locations",
     },
     {
-      label: "Fee",
-      value:
-        "For more information, please visit our website www.orange.edu.au or contact 1300069642",
+      label: "Total Course Duration",
+      value: "60 Weeks (including holiday breaks)",
     },
     {
-      label: "How long it will take?",
-      value:
-        'This is a standard apprenticeship with the mode of study being a combination of "on the job" and "off the job" training and assessment',
+      label: "Volume of learning",
+      value: "1442 hours",
     },
     {
-      label: "Is the course subsidised?",
+      label: "Fees & Charges",
       value:
-        'This course is subsidised by the NSW Government under the "Smart and Skilled" initiative',
+        "Tuition Fee: $AU 30,000\nNon Tuition Fee: $AU 2,800\nEstimated Total Course Cost: $AU 32,800",
     },
     {
-      label: "Intake",
-      value:
-        "For more information, please visit our website www.orange.edu.au or contact 1300069642",
+      label: "English Language Requirements",
+      isLink: true,
+      linkText: "Click here for requirements",
+      link: "https://www.vat.vic.edu.au/english-language-requirements-for-international-students/",
     },
   ];
 
@@ -296,14 +294,84 @@ Please refer the following link for the further information: https://training.go
     [5.5, 42, 506, 62, 162, "+10 weeks"],
     [5.0, 36, 478, 51, 154, "+20 weeks"],
   ];
-
   const courseRequirementSteps: Step[] = [
     {
       title: "International Students",
       icon: <User className="w-6 h-6" />,
       content: (
         <>
-           <TestEvidenceTable columns={columns} data={data} />
+          <h5>International Students:</h5>
+          <ol className="list-disc">
+            <li>Minimum age of 18 years and above</li>
+            <li>
+              Satisfactory completion of Year 12 or higher from applicant’s home
+              country.
+            </li>
+          </ol>
+          <h6 className="underline">1. Test evidence table:</h6>
+          <TestEvidenceTable columns={columns} data={data} />
+          <p>
+            Students must have completed a minimum of 120 hours of work
+            experience in the construction industry.
+          </p>
+          <p>
+            Score Guide: Average test score of 61 or higher in Oxford placement
+            test is equivalent to IELTS 6.0
+          </p>
+          <b>
+            Note: Results older than two years are not acceptable (for offshore
+            applicants).
+          </b>
+          <b>OR</b>
+          <p>
+            2. Evidence that they have studied in English for at least five
+            years in Australia, Canada, New Zealand, Republic of Ireland, South
+            Africa, United Kingdom or United States
+          </p>
+          <b>OR</b>
+          <p>
+            3. Evidence that, within two years of their application date, they
+            have successfully completed in Australia a foundation course or a
+            senior secondary certificate of education or successfully completed
+            substantial components (50% or more units according to the training
+            package) Certificate IV or higher-level qualification, from the
+            Australian Qualifications Framework.s
+          </p>
+          <b>OR</b>
+          <p>
+            4. Evidence that they are a citizen of and hold a valid passport
+            from the United Kingdom, the United States of America, Canada, New
+            Zealand, or the Republic of Ireland.
+          </p>
+          <b>OR</b>
+          <p>
+            5. Applicants originating from students visa assessment levels 1 and
+            2 countries without the required IELTS or equivalent score must
+            undertake the Language, Literacy and Numeracy (LLN) and Digital (D)
+            literacy test. For further information on student visa assessment
+            levels visit Department of Home Affairs’ website at{" "}
+            <a href="https://www.homeaffairs.gov.au/students/visa-assessment-levels">
+              https://www.homeaffairs.gov.au/students/visa-assessment-levels
+            </a>
+          </p>
+          <h5 className="text-base font-bold">
+            Additionally, the learner is required to:
+          </h5>
+          <h6 className="underline">Onshore International Students</h6>
+          <p>
+            Complete the Pre-Training Review including LLND test which aims to
+            identify training needs through questions on previous education or
+            training, relevance of the courses to learner and relevant
+            experience.
+          </p>
+          <h6 className="underline">Offshore International Students</h6>
+          <p>
+            Complete the Pre-Training Review including LLND test which aims to
+            identify training needs through questions on previous education or
+            training, relevance of the courses to learner and relevant
+            experience. This will be conducted either via video call (e.g.
+            Skype) or phone call to the prospective learner.{" "}
+          </p>
         </>
       ),
     },
@@ -400,6 +468,69 @@ Please refer the following link for the further information: https://training.go
         units={units}
         courseRequirementSteps={courseRequirementSteps}
       />
+      <div className="mt-10 space-y-4 container mx-auto p-4">
+        {/* Pathway from Qualification */}
+        <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+          <h5 className="text-xl font-semibold text-gray-800 mb-2">
+            🎓 Pathways – From the Qualification
+          </h5>
+          <p className="text-gray-600">
+            Learners who successfully complete this qualification may progress
+            into{" "}
+            <span className="font-medium">
+              Certificate IV or Diploma qualifications
+            </span>{" "}
+            with other RTOs and universities.
+          </p>
+        </div>
+
+        {/* Employment Pathways */}
+        <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+          <h5 className="text-xl font-semibold text-gray-800 mb-2">
+            💼 Employment Pathways
+          </h5>
+          <p className="text-gray-600 mb-3">
+            Graduates may find employment in the Construction Industry as:
+          </p>
+          <ol className="list-decimal list-inside space-y-1 text-gray-700 font-medium">
+            <li>Construction Workers</li>
+            <li>Contractors</li>
+            <li>Project Managers</li>
+            <li>Supervisors</li>
+          </ol>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-5 rounded-lg shadow-sm">
+          <p className="text-sm text-gray-700 mb-2">
+            ⚠️ <strong>Important Note:</strong> Above pathway information is in
+            line with the qualification description on the{" "}
+            <a
+              href="https://training.gov.au"
+              target="_blank"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              National Training Register
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://www.myskills.gov.au/"
+              target="_blank"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              MySkills
+            </a>
+            . It doesn’t imply any job guarantee or job role at the end of the
+            course.
+          </p>
+          <p className="text-sm text-gray-700">
+            Vocational Augment Training (VAT) does not claim any employment
+            outcome or guarantee. Please read this information in conjunction
+            with the <span className="font-semibold">Student Handbook</span>{" "}
+            available on this website before making an enrollment decision.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

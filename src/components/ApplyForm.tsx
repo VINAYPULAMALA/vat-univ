@@ -13,9 +13,10 @@ interface CourseInfo {
 
 interface CourseDetail {
   label: string;
-  value: string;
+  value?: string;
   isLink?: boolean;
   linkText?: string;
+  link?: string;
 }
 
 interface Unit {
@@ -163,23 +164,27 @@ const ApplyForm: React.FC<ApplyFormProps> = ({
               {courseDetails.map((detail, index) => (
                 <div
                   key={index}
-                  className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-lg hover:bg-orange-50 transition-colors"
+                  className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-2 rounded-lg hover:bg-orange-50 transition-colors"
                 >
-                  <div className="font-semibold text-gray-900">
+                  <div className="border-l-2 border-orange-300 font-semibold pl-2 text-gray-900">
                     {detail.label}
                   </div>
                   <div className="sm:col-span-2 text-gray-700">
-                    {detail.isLink ? (
+                    {detail.isLink && detail.link ? (
                       <span>
-                        {detail.value.split("(")[0]}
+                        {detail.value ? detail.value.split("(")[0] : ""}
                         <a
-                          href="#"
+                          href={detail.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-orange-600 hover:text-orange-700 font-medium hover:underline transition-all"
                         >
                           {detail.linkText ||
-                            detail.value.match(/\((.*?)\)/)?.[1]}
+                            detail.value?.match(/\((.*?)\)/)?.[1] ||
+                            "Click here"}
                         </a>
-                        {detail.value.includes(")") &&
+                        {detail.value &&
+                          detail.value.includes(")") &&
                           detail.value.split(")")[1]}
                       </span>
                     ) : (
