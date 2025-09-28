@@ -30,27 +30,30 @@ interface Step {
   content: React.ReactNode;
   icon: React.ReactNode;
 }
+interface Step1 {
+  content: React.ReactNode;
+}
 
 interface ApplyFormProps {
   courseInfo: CourseInfo;
   courseDetails: CourseDetail[];
-  description: string;
   smallDescription?: string;
   onClose?: () => void;
   isModal?: boolean;
   units: Unit[];
   courseRequirementSteps: Step[];
+  des_code: Step1[];
 }
 
 const ApplyForm: React.FC<ApplyFormProps> = ({
   courseInfo,
   courseDetails,
-  description,
   smallDescription,
   onClose,
   isModal = false,
   units,
   courseRequirementSteps,
+  des_code,
 }) => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -123,20 +126,10 @@ const ApplyForm: React.FC<ApplyFormProps> = ({
             </div>
 
             <div className="mb-10 bg-white bg-opacity-70 p-6 rounded-2xl shadow-sm backdrop-blur-sm">
-              <p className="text-gray-700 leading-relaxed">{description}</p>
-            </div>
-
-            <div className="mb-10 bg-white bg-opacity-70 p-6 rounded-2xl shadow-sm backdrop-blur-sm">
-              <h5 className="text-orange-600">Course Structure</h5>
               <p className="text-gray-700 leading-relaxed">
-                {smallDescription}
+                {des_code.map((step) => step.content)}
               </p>
             </div>
-
-            <button className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 transform hover:-translate-y-1">
-              <span>ENQUIRE NOW</span>
-              <ChevronRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
           </div>
         </div>
 
@@ -204,7 +197,12 @@ const ApplyForm: React.FC<ApplyFormProps> = ({
       </div>
 
       {/* Tabs for Units */}
+
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 my-12">
+        <div className="mb-10 bg-white bg-opacity-70 p-6 rounded-2xl text-center shadow-sm backdrop-blur-sm">
+          <h5 className="text-orange-600">Course Structure</h5>
+          <p className="text-gray-700 leading-relaxed">{smallDescription}</p>
+        </div>
         {/* Tabs */}
         <div className="flex justify-center space-x-4 mb-6">
           <button

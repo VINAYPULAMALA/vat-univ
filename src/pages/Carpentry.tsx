@@ -1,7 +1,11 @@
 import React from "react";
 import ApplyForm from "../components/ApplyForm";
-import { User, Globe, BookOpen } from "lucide-react";
+import { User, Globe } from "lucide-react";
 import { TestEvidenceTable } from "../components/StepTimelineWithIcons";
+import PagesHeader from "../components/PagesHeader";
+import Carpentry_1 from "../../assests/Carpentry_1.png";
+import Carpentry_2 from "../../assests/Carpentry_2.png";
+import Carpentry_3 from "../../assests/Carpentry_3.png";
 
 interface Unit {
   no: number;
@@ -12,6 +16,9 @@ interface Unit {
 interface Step {
   title: string;
   icon: React.ReactNode;
+  content: React.ReactNode;
+}
+interface Step1 {
   content: React.ReactNode;
 }
 const Carpentry: React.FC = () => {
@@ -56,21 +63,55 @@ const Carpentry: React.FC = () => {
     },
   ];
 
-  const description = `This is a trade qualification for carpenters in residential and commercial workplaces. It includes setting out, manufacturing, constructing, assembling, installing and repairing products made using timber and non-timber materials.
+  const des_code: Step1[] = [
+    {
+      content: (
+        <>
+          <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md">
+            <h1 className="text-3xl font-bold text-gray-800 mb-4">
+              Course Description
+            </h1>
 
-Occupational titles may include:
+            <p className="text-gray-700 mb-6">
+              This is a trade qualification for carpenters in residential and
+              commercial workplaces. It includes setting out, manufacturing,
+              constructing, assembling, installing, and repairing products made
+              using timber and non-timber materials.
+            </p>
 
-1. Carpenter - Commercial
+            <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+              Occupational Titles May Include:
+            </h2>
+            <ul className="list-decimal list-inside mb-6 text-gray-700">
+              <li>Carpenter - Commercial</li>
+              <li>Carpenter - Formwork</li>
+              <li>Carpenter - Residential</li>
+            </ul>
 
-2. Carpenter - Formwork
+            <p className="text-gray-700 mb-6">
+              State and territory jurisdictions may have different licensing,
+              legislative, regulatory, or certification requirements. Relevant
+              state and territory regulatory authorities should be consulted to
+              confirm those requirements.
+            </p>
 
-3. Carpenter - Residential
+            <p className="text-gray-700">
+              Please refer the following link for further information:
+              <a
+                href="https://training.gov.au/Training/Details/CPC30220"
+                target="_blank"
+                className="text-blue-600 hover:underline"
+              >
+                https://training.gov.au/Training/Details/CPC30220
+              </a>
+            </p>
+          </div>
+        </>
+      ),
+    },
+  ];
 
-State and territory jurisdictions may have different licensing, legislative, regulatory or certification requirements. Relevant state and territory regulatory authorities should be consulted to confirm those requirements.
-
-Please refer the following link for the further information: https://training.gov.au/Training/Details/CPC30220`;
-
-  const smallDescription = `In order to achieve this qualification, student must complete following 8 unit of competencies.`;
+  const smallDescription = `In order to achieve this qualification, student must complete following 34 unit of competencies.`;
 
   // Data for the course units
   const units: Unit[] = [
@@ -458,80 +499,93 @@ Please refer the following link for the further information: https://training.go
       ),
     },
   ];
+ const carouselItems = [
+  <img src={Carpentry_1} alt="Carpentry 1" className="w-full h-80 md:h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl" key={1} />,
+  <img src={Carpentry_2} alt="Carpentry 2" className="w-full h-80 md:h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl" key={2} />,
+  <img src={Carpentry_3} alt="Carpentry 3" className="w-full h-80 md:h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl" key={3} />,
+];
   return (
-    <div className="min-h-screen bg-gray-50">
-      <ApplyForm
-        courseInfo={courseInfo}
-        courseDetails={courseDetails}
-        description={description}
-        smallDescription={smallDescription}
-        units={units}
-        courseRequirementSteps={courseRequirementSteps}
+    <>
+      <PagesHeader
+        title="CPC30220"
+        subtitle="Certificate III in Carpentry - Domestic"
+        description="Discover your passion and build your future with our comprehensive range of industry-focused courses designed for success."
+        carouselItems={carouselItems}
       />
-      <div className="mt-10 space-y-4 container mx-auto p-4">
-        {/* Pathway from Qualification */}
-        <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
-          <h5 className="text-xl font-semibold text-gray-800 mb-2">
-            🎓 Pathways – From the Qualification
-          </h5>
-          <p className="text-gray-600">
-            Learners who successfully complete this qualification may progress
-            into{" "}
-            <span className="font-medium">
-              Certificate IV or Diploma qualifications
-            </span>{" "}
-            with other RTOs and universities.
-          </p>
-        </div>
+      <div className="min-h-screen bg-gray-50">
+        <ApplyForm
+          courseInfo={courseInfo}
+          courseDetails={courseDetails}
+          smallDescription={smallDescription}
+          units={units}
+          courseRequirementSteps={courseRequirementSteps}
+          des_code={des_code}
+        />
+        <div className="mt-10 space-y-4 container mx-auto p-4">
+          {/* Pathway from Qualification */}
+          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+            <h5 className="text-xl font-semibold text-gray-800 mb-2">
+              🎓 Pathways – From the Qualification
+            </h5>
+            <p className="text-gray-600">
+              Learners who successfully complete this qualification may progress
+              into{" "}
+              <span className="font-medium">
+                Certificate IV or Diploma qualifications
+              </span>{" "}
+              with other RTOs and universities.
+            </p>
+          </div>
 
-        {/* Employment Pathways */}
-        <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
-          <h5 className="text-xl font-semibold text-gray-800 mb-2">
-            💼 Employment Pathways
-          </h5>
-          <p className="text-gray-600 mb-3">
-            Graduates may find employment in the Construction Industry as:
-          </p>
-          <ol className="list-decimal list-inside space-y-1 text-gray-700 font-medium">
-            <li>Construction Workers</li>
-            <li>Contractors</li>
-            <li>Project Managers</li>
-            <li>Supervisors</li>
-          </ol>
-        </div>
+          {/* Employment Pathways */}
+          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+            <h5 className="text-xl font-semibold text-gray-800 mb-2">
+              💼 Employment Pathways
+            </h5>
+            <p className="text-gray-600 mb-3">
+              Graduates may find employment in the Construction Industry as:
+            </p>
+            <ol className="list-decimal list-inside space-y-1 text-gray-700 font-medium">
+              <li>Construction Workers</li>
+              <li>Contractors</li>
+              <li>Project Managers</li>
+              <li>Supervisors</li>
+            </ol>
+          </div>
 
-        {/* Disclaimer */}
-        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-5 rounded-lg shadow-sm">
-          <p className="text-sm text-gray-700 mb-2">
-            ⚠️ <strong>Important Note:</strong> Above pathway information is in
-            line with the qualification description on the{" "}
-            <a
-              href="https://training.gov.au"
-              target="_blank"
-              className="text-blue-600 underline hover:text-blue-800"
-            >
-              National Training Register
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://www.myskills.gov.au/"
-              target="_blank"
-              className="text-blue-600 underline hover:text-blue-800"
-            >
-              MySkills
-            </a>
-            . It doesn’t imply any job guarantee or job role at the end of the
-            course.
-          </p>
-          <p className="text-sm text-gray-700">
-            Vocational Augment Training (VAT) does not claim any employment
-            outcome or guarantee. Please read this information in conjunction
-            with the <span className="font-semibold">Student Handbook</span>{" "}
-            available on this website before making an enrollment decision.
-          </p>
+          {/* Disclaimer */}
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-5 rounded-lg shadow-sm">
+            <p className="text-sm text-gray-700 mb-2">
+              ⚠️ <strong>Important Note:</strong> Above pathway information is
+              in line with the qualification description on the{" "}
+              <a
+                href="https://training.gov.au"
+                target="_blank"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                National Training Register
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://www.myskills.gov.au/"
+                target="_blank"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                MySkills
+              </a>
+              . It doesn’t imply any job guarantee or job role at the end of the
+              course.
+            </p>
+            <p className="text-sm text-gray-700">
+              Vocational Augment Training (VAT) does not claim any employment
+              outcome or guarantee. Please read this information in conjunction
+              with the <span className="font-semibold">Student Handbook</span>{" "}
+              available on this website before making an enrollment decision.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
