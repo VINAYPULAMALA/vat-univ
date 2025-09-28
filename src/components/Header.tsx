@@ -1,5 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Menu, X, Search, Phone, Mail, ChevronDown, ChevronRight } from 'lucide-react';
+import React, { useState, useRef, useEffect } from "react";
+import {
+  Menu,
+  X,
+  Search,
+  Phone,
+  Mail,
+  ChevronDown,
+  ChevronRight,
+} from "lucide-react";
 
 interface DropdownItem {
   label: string;
@@ -16,7 +24,9 @@ interface MenuItem {
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [activeSubDropdown, setActiveSubDropdown] = useState<string | null>(null);
+  const [activeSubDropdown, setActiveSubDropdown] = useState<string | null>(
+    null
+  );
   const [showApplyModal, setShowApplyModal] = useState(false);
   const [showReachOutModal, setShowReachOutModal] = useState(false);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -25,164 +35,177 @@ const Header: React.FC = () => {
 
   const menuItems: MenuItem[] = [
     {
-      label: 'OUR COURSES',
+      label: "OUR COURSES",
       dropdown: [
         {
-          label: 'Domestic Students',
-          href: '#',
+          label: "CHC TRAINING PACKAGE",
+          href: "#",
           subItems: [
-            { label: 'Undergraduate Programs', href: '#' },
-            { label: 'Postgraduate Programs', href: '#' },
-            { label: 'Research Degrees', href: '#' },
-            { label: 'Short Courses', href: '#' },
-            { label: 'Professional Development', href: '#' }
-          ]
+            {
+              label: "CHC30121 – Certificate III in Early Childhood",
+              href: "#",
+            },
+            {
+              label: "CHC50121 – Diploma of Early Childhood Education and Care",
+              href: "#",
+            },
+          ],
         },
         {
-          label: 'International Students',
-          href: '#',
+          label: "SIT TRAINING PACKAGE",
+          href: "#",
           subItems: [
-            { label: 'English Language Programs', href: '#' },
-            { label: 'Foundation Programs', href: '#' },
-            { label: 'Undergraduate Degrees', href: '#' },
-            { label: 'Postgraduate Degrees', href: '#' },
-            { label: 'Student Support Services', href: '#' }
-          ]
+            {
+              label: "SIT30821 – Certificate III in Commercial Cookery",
+              href: "#",
+            },
+            {
+              label: "SIT40521 – Certificate IV in Kitchen Management",
+              href: "#",
+            },
+            {
+              label: "SIT50422 – Diploma of Hospitality Management",
+              href: "#",
+            },
+          ],
         },
         {
-          label: 'Study Tour Program',
-          href: '#',
+          label: "CPC TRAINING PACKAGE",
+          href: "#",
           subItems: [
-            { label: 'Short-term Programs', href: '#' },
-            { label: 'Cultural Immersion', href: '#' },
-            { label: 'Academic Exchange', href: '#' },
-            { label: 'Industry Visits', href: '#' },
-            { label: 'Application Process', href: '#' }
-          ]
-        }
-      ]
+            { label: "CPC30220 – Certificate III in Carpentry", href: "" },
+          ],
+        },
+        {
+          label: "BSB TRAINING PACKAGE",
+          href: "#",
+          subItems: [
+            { label: "BSB80120 - Graduate Diploma of Management", href: "#" },
+          ],
+        },
+      ],
     },
     {
-      label: 'WHY ORANGE',
-      href: '/whyorange',
+      label: "WHY ORANGE",
+      href: "/whyorange",
       dropdown: [
         {
-          label: 'What We Offer',
-          href: '#',
+          label: "What We Offer",
+          href: "#",
           subItems: [
-            { label: 'Academic Excellence', href: '#' },
-            { label: 'Industry Connections', href: '#' },
-            { label: 'Research Opportunities', href: '#' },
-            { label: 'Student Support', href: '#' },
-            { label: 'Campus Facilities', href: '#' }
-          ]
+            { label: "Academic Excellence", href: "#" },
+            { label: "Industry Connections", href: "#" },
+            { label: "Research Opportunities", href: "#" },
+            { label: "Student Support", href: "#" },
+            { label: "Campus Facilities", href: "#" },
+          ],
         },
         {
-          label: 'Our History',
-          href: '#',
+          label: "Our History",
+          href: "#",
           subItems: [
-            { label: 'Foundation Story', href: '#' },
-            { label: 'Key Milestones', href: '#' },
-            { label: 'Notable Alumni', href: '#' },
-            { label: 'Heritage Buildings', href: '#' },
-            { label: 'Timeline', href: '#' }
-          ]
+            { label: "Foundation Story", href: "#" },
+            { label: "Key Milestones", href: "#" },
+            { label: "Notable Alumni", href: "#" },
+            { label: "Heritage Buildings", href: "#" },
+            { label: "Timeline", href: "#" },
+          ],
         },
         {
-          label: 'Our Mission',
-          href: '#',
+          label: "Our Mission",
+          href: "#",
           subItems: [
-            { label: 'Vision Statement', href: '#' },
-            { label: 'Core Values', href: '#' },
-            { label: 'Strategic Plan', href: '#' },
-            { label: 'Community Commitment', href: '#' },
-            { label: 'Sustainability Goals', href: '#' }
-          ]
+            { label: "Vision Statement", href: "#" },
+            { label: "Core Values", href: "#" },
+            { label: "Strategic Plan", href: "#" },
+            { label: "Community Commitment", href: "#" },
+            { label: "Sustainability Goals", href: "#" },
+          ],
         },
         {
-          label: 'Meet Our Team',
-          href: '#',
+          label: "Meet Our Team",
+          href: "#",
           subItems: [
-            { label: 'Leadership Team', href: '#' },
-            { label: 'Academic Staff', href: '#' },
-            { label: 'Support Staff', href: '#' },
-            { label: 'Board Members', href: '#' },
-            { label: 'Advisory Council', href: '#' }
-          ]
+            { label: "Leadership Team", href: "#" },
+            { label: "Academic Staff", href: "#" },
+            { label: "Support Staff", href: "#" },
+            { label: "Board Members", href: "#" },
+            { label: "Advisory Council", href: "#" },
+          ],
         },
         {
-          label: 'Awards',
-          href: '#',
+          label: "Awards",
+          href: "#",
           subItems: [
-            { label: 'Teaching Excellence', href: '#' },
-            { label: 'Research Recognition', href: '#' },
-            { label: 'Industry Partnerships', href: '#' },
-            { label: 'Student Achievements', href: '#' },
-            { label: 'Community Awards', href: '#' }
-          ]
-        }
-      ]
+            { label: "Teaching Excellence", href: "#" },
+            { label: "Research Recognition", href: "#" },
+            { label: "Industry Partnerships", href: "#" },
+            { label: "Student Achievements", href: "#" },
+            { label: "Community Awards", href: "#" },
+          ],
+        },
+      ],
     },
     {
-      label: 'HOW TO APPLY',
-      href: '/howtoapply',
+      label: "HOW TO APPLY",
+      href: "/howtoapply",
       dropdown: [
         {
-          label: 'Application Process',
-          href: '#',
+          label: "Application Process",
+          href: "#",
           subItems: [
-            { label: 'Step-by-Step Guide', href: '#' },
-            { label: 'Required Documents', href: '#' },
-            { label: 'Application Deadlines', href: '#' },
-            { label: 'Entry Requirements', href: '#' },
-            { label: 'Assessment Criteria', href: '#' }
-          ]
+            { label: "Step-by-Step Guide", href: "#" },
+            { label: "Required Documents", href: "#" },
+            { label: "Application Deadlines", href: "#" },
+            { label: "Entry Requirements", href: "#" },
+            { label: "Assessment Criteria", href: "#" },
+          ],
         },
         {
-          label: 'Admission Requirements',
-          href: '#',
+          label: "Admission Requirements",
+          href: "#",
           subItems: [
-            { label: 'Academic Prerequisites', href: '#' },
-            { label: 'English Proficiency', href: '#' },
-            { label: 'Portfolio Requirements', href: '#' },
-            { label: 'Interview Process', href: '#' },
-            { label: 'Special Considerations', href: '#' }
-          ]
+            { label: "Academic Prerequisites", href: "#" },
+            { label: "English Proficiency", href: "#" },
+            { label: "Portfolio Requirements", href: "#" },
+            { label: "Interview Process", href: "#" },
+            { label: "Special Considerations", href: "#" },
+          ],
         },
         {
-          label: 'Financial Aid',
-          href: '#',
+          label: "Financial Aid",
+          href: "#",
           subItems: [
-            { label: 'Scholarships', href: '#' },
-            { label: 'Student Loans', href: '#' },
-            { label: 'Payment Plans', href: '#' },
-            { label: 'Work Study Programs', href: '#' },
-            { label: 'Emergency Assistance', href: '#' }
-          ]
+            { label: "Scholarships", href: "#" },
+            { label: "Student Loans", href: "#" },
+            { label: "Payment Plans", href: "#" },
+            { label: "Work Study Programs", href: "#" },
+            { label: "Emergency Assistance", href: "#" },
+          ],
         },
         {
-          label: 'International Applications',
-          href: '#',
+          label: "International Applications",
+          href: "#",
           subItems: [
-            { label: 'Visa Requirements', href: '#' },
-            { label: 'Document Translation', href: '#' },
-            { label: 'Health Insurance', href: '#' },
-            { label: 'Accommodation Options', href: '#' },
-            { label: 'Orientation Programs', href: '#' }
-          ]
+            { label: "Visa Requirements", href: "#" },
+            { label: "Document Translation", href: "#" },
+            { label: "Health Insurance", href: "#" },
+            { label: "Accommodation Options", href: "#" },
+            { label: "Orientation Programs", href: "#" },
+          ],
         },
         {
-          label: 'Support Services',
-          href: '#',
+          label: "Support Services",
+          href: "#",
           subItems: [
-            { label: 'Application Assistance', href: '#' },
-            { label: 'Career Counseling', href: '#' },
-            { label: 'Academic Advising', href: '#' },
-            { label: 'Student Mentoring', href: '#' },
-            { label: 'Disability Support', href: '#' }
-          ]
-        }
-      ]
+            { label: "Application Assistance", href: "#" },
+            { label: "Career Counseling", href: "#" },
+            { label: "Academic Advising", href: "#" },
+            { label: "Student Mentoring", href: "#" },
+            { label: "Disability Support", href: "#" },
+          ],
+        },
+      ],
     },
     // {
     //   label: 'COMMUNITY',
@@ -245,36 +268,36 @@ const Header: React.FC = () => {
     //   ]
     // },
     {
-      label: 'INFORMATION',
+      label: "INFORMATION",
       dropdown: [
         {
-          label: 'Academic Information',
-          href: '#',
+          label: "Academic Information",
+          href: "#",
           subItems: [
-            { label: 'Course Catalog', href: '#' },
-            { label: 'Academic Calendar', href: '#' },
-            { label: 'Grading System', href: '#' },
-            { label: 'Academic Policies', href: '#' },
-            { label: 'Graduation Requirements', href: '#' }
-          ]
+            { label: "Course Catalog", href: "#" },
+            { label: "Academic Calendar", href: "#" },
+            { label: "Grading System", href: "#" },
+            { label: "Academic Policies", href: "#" },
+            { label: "Graduation Requirements", href: "#" },
+          ],
         },
         {
-          label: 'Campus Resources',
-          href: '#',
+          label: "Campus Resources",
+          href: "#",
           subItems: [
-            { label: 'Library Services', href: '#' },
-            { label: 'IT Support', href: '#' },
-            { label: 'Health Services', href: '#' },
-            { label: 'Counseling Services', href: '#' },
-            { label: 'Accessibility Services', href: '#' }
-          ]
-        }
-      ]
+            { label: "Library Services", href: "#" },
+            { label: "IT Support", href: "#" },
+            { label: "Health Services", href: "#" },
+            { label: "Counseling Services", href: "#" },
+            { label: "Accessibility Services", href: "#" },
+          ],
+        },
+      ],
     },
     {
-      label: 'ENQUIRE  NOW',
-      href: '#contact'
-    }
+      label: "ENQUIRE  NOW",
+      href: "#contact",
+    },
   ];
 
   const handleMouseEnter = (label: string) => {
@@ -346,10 +369,25 @@ const Header: React.FC = () => {
               </div>
             </div>
             <div className="hidden md:flex space-x-6">
-              <a href="#" className="hover:text-orange-200 transition-all duration-300">Staff Portal</a>
-              <a href="#" className="hover:text-orange-200 transition-all duration-300">Student Portal</a>
-              <a href="#" className="hover:text-orange-200 transition-all duration-300">Library</a>
-              <button 
+              <a
+                href="#"
+                className="hover:text-orange-200 transition-all duration-300"
+              >
+                Staff Portal
+              </a>
+              <a
+                href="#"
+                className="hover:text-orange-200 transition-all duration-300"
+              >
+                Student Portal
+              </a>
+              <a
+                href="#"
+                className="hover:text-orange-200 transition-all duration-300"
+              >
+                Library
+              </a>
+              <button
                 onClick={() => setShowApplyModal(true)}
                 className="bg-white text-orange-600 px-6 py-1.5 rounded-full text-sm font-medium hover:bg-orange-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
               >
@@ -361,13 +399,29 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main header */}
-      <header className={`shadow-md relative z-50 sticky top-0 transition-all duration-300 ${scrolled ? 'bg-gradient-to-r from-orange-500 to-red-500' : 'bg-white'}`}>
+      <header
+        className={`shadow-md relative z-50 sticky top-0 transition-all duration-300 ${
+          scrolled ? "bg-gradient-to-r from-orange-500 to-red-500" : "bg-white"
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center transform hover:scale-105 transition-transform duration-300">
-              <div className={`text-3xl font-bold bg-clip-text ${scrolled ? 'text-white' : 'bg-gradient-to-r from-orange-600 to-orange-500 text-transparent'}`}>Orange</div>
-              <div className={`ml-2 text-sm border-l-2 border-orange-200 pl-2 ${scrolled ? 'text-white border-orange-300' : 'text-gray-600'}`}>
+              <div
+                className={`text-3xl font-bold bg-clip-text ${
+                  scrolled
+                    ? "text-white"
+                    : "bg-gradient-to-r from-orange-600 to-orange-500 text-transparent"
+                }`}
+              >
+                Orange
+              </div>
+              <div
+                className={`ml-2 text-sm border-l-2 border-orange-200 pl-2 ${
+                  scrolled ? "text-white border-orange-300" : "text-gray-600"
+                }`}
+              >
                 <div className="font-semibold">UNIVERSITY</div>
                 <div className="text-xs tracking-wider">AUSTRALIA</div>
               </div>
@@ -379,15 +433,30 @@ const Header: React.FC = () => {
                 <div
                   key={item.label}
                   className="relative group"
-                  onMouseEnter={() => item.dropdown && handleMouseEnter(item.label)}
+                  onMouseEnter={() =>
+                    item.dropdown && handleMouseEnter(item.label)
+                  }
                   onMouseLeave={handleMouseLeave}
                 >
                   <a
-                    href={item.href || (item.label === 'OUR COURSES' ? '/courses' : '#')}
-                    className={`font-medium transition-all duration-300 px-4 py-2 rounded-lg hover:bg-orange-50 flex items-center group-hover:shadow-sm ${scrolled ? 'text-white hover:text-orange-200' : 'text-gray-700 hover:text-orange-600'}`}
+                    href={
+                      item.href ||
+                      (item.label === "OUR COURSES" ? "/courses" : "#")
+                    }
+                    className={`font-medium transition-all duration-300 px-4 py-2 rounded-lg hover:bg-orange-50 flex items-center group-hover:shadow-sm ${
+                      scrolled
+                        ? "text-white hover:text-orange-200"
+                        : "text-gray-700 hover:text-orange-600"
+                    }`}
                   >
                     {item.label}
-                    {item.dropdown && <ChevronDown className={`ml-1 w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300 ${scrolled ? 'text-white' : 'text-gray-700'}`} />}
+                    {item.dropdown && (
+                      <ChevronDown
+                        className={`ml-1 w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300 ${
+                          scrolled ? "text-white" : "text-gray-700"
+                        }`}
+                      />
+                    )}
                   </a>
                   {/* Dropdown */}
                   {item.dropdown && activeDropdown === item.label && (
@@ -396,7 +465,10 @@ const Header: React.FC = () => {
                         <div
                           key={dropdownItem.label}
                           className="relative"
-                          onMouseEnter={() => dropdownItem.subItems && handleSubMouseEnter(dropdownItem.label)}
+                          onMouseEnter={() =>
+                            dropdownItem.subItems &&
+                            handleSubMouseEnter(dropdownItem.label)
+                          }
                           onMouseLeave={handleSubMouseLeave}
                         >
                           <a
@@ -404,23 +476,26 @@ const Header: React.FC = () => {
                             className="block px-4 py-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-colors flex items-center justify-between"
                           >
                             {dropdownItem.label}
-                            {dropdownItem.subItems && <ChevronRight className="w-4 h-4" />}
+                            {dropdownItem.subItems && (
+                              <ChevronRight className="w-4 h-4" />
+                            )}
                           </a>
 
                           {/* Sub-dropdown */}
-                          {dropdownItem.subItems && activeSubDropdown === dropdownItem.label && (
-                            <div className="absolute top-0 left-full ml-1 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 ease-out">
-                              {dropdownItem.subItems.map((subItem) => (
-                                <a
-                                  key={subItem.label}
-                                  href={subItem.href}
-                                  className="block px-4 py-2 text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-colors text-sm"
-                                >
-                                  {subItem.label}
-                                </a>
-                              ))}
-                            </div>
-                          )}
+                          {dropdownItem.subItems &&
+                            activeSubDropdown === dropdownItem.label && (
+                              <div className="absolute top-0 left-full ml-1 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 ease-out">
+                                {dropdownItem.subItems.map((subItem) => (
+                                  <a
+                                    key={subItem.label}
+                                    href={subItem.href}
+                                    className="block px-4 py-2 text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-colors text-sm"
+                                  >
+                                    {subItem.label}
+                                  </a>
+                                ))}
+                              </div>
+                            )}
                         </div>
                       ))}
                     </div>
@@ -431,15 +506,29 @@ const Header: React.FC = () => {
 
             {/* Search and Mobile Menu */}
             <div className="flex items-center space-x-4">
-              <Search className={`w-6 h-6 cursor-pointer transition-colors ${scrolled ? 'text-white hover:text-orange-200' : 'text-gray-600 hover:text-orange-600'}`} />
+              <Search
+                className={`w-6 h-6 cursor-pointer transition-colors ${
+                  scrolled
+                    ? "text-white hover:text-orange-200"
+                    : "text-gray-600 hover:text-orange-600"
+                }`}
+              />
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="lg:hidden p-2"
               >
                 {isMenuOpen ? (
-                  <X className={`w-6 h-6 ${scrolled ? 'text-white' : 'text-gray-600'}`} />
+                  <X
+                    className={`w-6 h-6 ${
+                      scrolled ? "text-white" : "text-gray-600"
+                    }`}
+                  />
                 ) : (
-                  <Menu className={`w-6 h-6 ${scrolled ? 'text-white' : 'text-gray-600'}`} />
+                  <Menu
+                    className={`w-6 h-6 ${
+                      scrolled ? "text-white" : "text-gray-600"
+                    }`}
+                  />
                 )}
               </button>
             </div>
@@ -453,21 +542,25 @@ const Header: React.FC = () => {
               {menuItems.map((item) => (
                 <div key={item.label}>
                   <a
-                    href={item.href || '#'} 
-                    className={`block font-medium py-3 px-2 border-b border-gray-100 ${scrolled ? 'text-white hover:text-orange-200' : 'text-gray-700 hover:text-orange-600'}`}
+                    href={item.href || "#"}
+                    className={`block font-medium py-3 px-2 border-b border-gray-100 ${
+                      scrolled
+                        ? "text-white hover:text-orange-200"
+                        : "text-gray-700 hover:text-orange-600"
+                    }`}
                   >
                     {item.label}
                   </a>
                 </div>
               ))}
               <div className="pt-4 space-y-2">
-                <button 
+                <button
                   onClick={() => setShowApplyModal(true)}
                   className="w-full bg-orange-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-orange-700 transition-colors"
                 >
                   Apply Online
                 </button>
-                <button 
+                <button
                   onClick={() => setShowReachOutModal(true)}
                   className="w-full bg-gray-100 text-gray-700 py-3 px-4 rounded-lg font-medium hover:bg-gray-200 transition-colors"
                 >
