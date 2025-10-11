@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       <div 
         className="relative min-h-[600px] flex items-center"
         style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)',
+          backgroundImage: 'url(https://www.tboacademy.com/blog/wp-content/uploads/2024/01/Flinder-Street-Railway-Station.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
