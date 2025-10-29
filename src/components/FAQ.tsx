@@ -64,7 +64,7 @@ const FAQ: React.FC = () => {
         {
           question: "What clubs and societies can I join?",
           answer:
-            "Orange University has over 100 student clubs and societies covering academic interests, sports, cultural activities, and special interests. Joining clubs is a great way to meet people, develop skills, and enhance your university experience.",
+            "VAT University has over 100 student clubs and societies covering academic interests, sports, cultural activities, and special interests. Joining clubs is a great way to meet people, develop skills, and enhance your university experience.",
         },
         {
           question: "Is there parking available on campus?",
@@ -114,7 +114,7 @@ const FAQ: React.FC = () => {
               <Camera className="inline-block w-6 h-6 text-orange-500 mr-2 -mt-1" />
               Find answers to common questions about{" "}
               <span className="relative px-2 mx-1 bg-gradient-to-r from-amber-100 to-orange-100">
-                Orange University
+                VAT University
                 <div className="absolute inset-0 bg-white/50 mix-blend-overlay animate-pulse"></div>
               </span>
             </p>

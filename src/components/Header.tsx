@@ -39,48 +39,48 @@ const Header: React.FC = () => {
       dropdown: [
         {
           label: "CHC TRAINING PACKAGE",
-          href: "#",
+          href: "/courses",
           subItems: [
             {
               label: "CHC30121 – Certificate III in Early Childhood",
-              href: "#",
+              href: "/early-childhood",
             },
             {
               label: "CHC50121 – Diploma of Early Childhood Education and Care",
-              href: "#",
+              href: "/early-childhood-education",
             },
           ],
         },
         {
           label: "SIT TRAINING PACKAGE",
-          href: "#",
+          href: "/courses",
           subItems: [
             {
               label: "SIT30821 – Certificate III in Commercial Cookery",
-              href: "#",
+              href: "/commercial-cookery",
             },
             {
               label: "SIT40521 – Certificate IV in Kitchen Management",
-              href: "#",
+              href: "/kitchen-management",
             },
             {
               label: "SIT50422 – Diploma of Hospitality Management",
-              href: "#",
+              href: "/hospitality-management",
             },
           ],
         },
         {
           label: "CPC TRAINING PACKAGE",
-          href: "#",
+          href: "/courses",
           subItems: [
-            { label: "CPC30220 – Certificate III in Carpentry", href: "" },
+            { label: "CPC30220 – Certificate III in Carpentry", href: "/carpentry",},
           ],
         },
         {
           label: "BSB TRAINING PACKAGE",
-          href: "#",
+          href: "/courses",
           subItems: [
-            { label: "BSB80120 - Graduate Diploma of Management", href: "#" },
+            { label: "BSB80120 - Graduate Diploma of Management", href: "/management-learning" },
           ],
         },
       ],

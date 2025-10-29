@@ -147,7 +147,7 @@ const Footer = () => {
         <div className="border-t border-gray-800/50 py-8 mt-8">
           <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
             <div className="mb-4 md:mb-0">
-              © {new Date().getFullYear()} Orange University. All rights reserved.
+              © {new Date().getFullYear()} VAT University. All rights reserved.
             </div>
             <div className="flex space-x-6">
               {['Privacy Policy', 'Terms of Service', 'Accessibility'].map((item, index) => (

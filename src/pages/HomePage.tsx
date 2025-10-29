@@ -9,6 +9,7 @@ import Achievements from '../components/Achievements';
 import FAQ from '../components/FAQ';
 import ReachOut from '../components/ReachOut';
 import News from '../components/News';
+import college_1 from '../../assests/college_1.png';
 import { Users, Globe, BookOpen, Trophy } from "lucide-react";
 
 const HomePage = () => (
@@ -16,13 +17,13 @@ const HomePage = () => (
     <Hero />
     <Programs />
     <About
-      title="Leading Education in Regional Australia"
+      title="About VAT"
       description={[
-        'Orange University has been at the forefront...',
-        'Our commitment to innovation...'
+        'Study! Your Future Is Here!',
+        'At VAT (Vocational Augment Training), We’re not just an RTO – we’re a community that supports and empowers each student. We welcome you to join us and take the first step toward a rewarding and successful career. To be a transformative leader in vocational education by engaging, educating, equipping, and empowering individuals to reach their full potential through practical, high-quality learning experiences....'
       ]}
       buttonText="Discover Our Story"
-      imageUrl="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg"
+      imageUrl={college_1}
       stats={[
         { icon: Users, number: "15,000+", label: "Students" },
         { icon: Globe, number: "60+", label: "Countries" },

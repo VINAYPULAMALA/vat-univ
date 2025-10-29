@@ -82,7 +82,7 @@ const ReachOut: React.FC = () => {
               <Camera className="inline-block w-6 h-6 text-orange-500 mr-2 -mt-1" />
               Have questions about
               <span className="relative px-2 mx-1 bg-gradient-to-r from-amber-100 to-orange-100">
-                Orange University?
+                VAT University?
                 <div className="absolute inset-0 bg-white/50 mix-blend-overlay animate-pulse"></div>
               </span>
               We're here to help you every step of the way
@@ -237,7 +237,7 @@ const ReachOut: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900">Main Campus</h4>
                     <p className="text-gray-600">
-                      Orange University<br />
+                      VAT University<br />
                       Bathurst Road<br />
                       Orange NSW 2800<br />
                       Australia

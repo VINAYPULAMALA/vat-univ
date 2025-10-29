@@ -4,7 +4,7 @@ import { Calendar, Clock, ArrowRight, Sparkles, Camera } from 'lucide-react';
 const News: React.FC = () => {
   const newsItems = [
     {
-      title: "Orange University Receives $2M Research Grant for Sustainable Agriculture",
+      title: "VAT University Receives $2M Research Grant for Sustainable Agriculture",
       excerpt: "Our agriculture department has been awarded a significant grant to develop innovative farming practices...",
       date: "March 15, 2024",
       readTime: "3 min read",
@@ -19,7 +19,7 @@ const News: React.FC = () => {
     },
     {
       title: "International Student Exchange Program Expands to 20 Countries",
-      excerpt: "Orange University continues to strengthen global partnerships with new exchange agreements...",
+      excerpt: "VAT University continues to strengthen global partnerships with new exchange agreements...",
       date: "March 5, 2024",
       readTime: "2 min read",
       image: "https://images.pexels.com/photos/159775/library-la-trobe-study-students-159775.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop"
@@ -44,7 +44,7 @@ const News: React.FC = () => {
               <Camera className="inline-block w-6 h-6 text-orange-500 mr-2 -mt-1" />
               Stay up to date with the latest from
               <span className="relative px-2 mx-1 bg-gradient-to-r from-amber-100 to-orange-100">
-                Orange University
+                VAT University
                 <div className="absolute inset-0 bg-white/50 mix-blend-overlay animate-pulse"></div>
               </span>
             </p>

@@ -10,6 +10,11 @@ import {
 import { Carousel } from "./Silder"; // your carousel component
 import Childern_4 from "../../assests/Childern_4.png";
 import Childern_3 from "../../assests/Childern_3.png";
+import Childern_5 from "../../assests/Childern_5.png";
+import Childern_6 from "../../assests/Childern_6.png";
+import Graduate from "../../assests/Graduate.png";
+import Hospitality from "../../assests/Hospitality.png";
+import Carpentry from "../../assests/Carpentry_3.png";
 const Programs: React.FC = () => {
   const programs = [
     {
@@ -30,36 +35,31 @@ const Programs: React.FC = () => {
       icon: Briefcase,
       title: "SIT30821 – Certificate III in Commercial Cookery",
       description: "Industry-focused courses and continuing education programs",
-      image:
-        "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      image: Childern_5,
     },
     {
       icon: Users,
       title: "SIT40521 – Certificate IV in Kitchen Management",
       description: "Flexible study options with comprehensive online support",
-      image:
-        "https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      image: Childern_6,
     },
     {
       icon: Users,
       title: "SIT50422 – Diploma of Hospitality Management",
       description: "Flexible study options with comprehensive online support",
-      image:
-        "https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      image: Hospitality,
     },
     {
       icon: Users,
       title: "CPC30220 – Certificate III in Carpentry",
       description: "Flexible study options with comprehensive online support",
-      image:
-        "https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      image: Carpentry,
     },
     {
       icon: Users,
       title: "BSB80120 - Graduate Diploma of Management",
       description: "Flexible study options with comprehensive online support",
-      image:
-        "https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      image: Graduate,
     },
     
   ];

@@ -10,7 +10,7 @@ const Testimonials: React.FC = () => {
       program: "Bachelor of Engineering",
       year: "Class of 2023",
       image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-      quote: "Orange University provided me with not just excellent education, but also the practical skills and industry connections that landed me my dream job. The professors are incredibly supportive and the facilities are world-class.",
+      quote: "VAT University provided me with not just excellent education, but also the practical skills and industry connections that landed me my dream job. The professors are incredibly supportive and the facilities are world-class.",
       rating: 5
     },
     {
@@ -18,7 +18,7 @@ const Testimonials: React.FC = () => {
       program: "Master of Business Administration",
       year: "Class of 2022",
       image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-      quote: "The MBA program at Orange University transformed my career. The blend of theoretical knowledge and real-world case studies, combined with networking opportunities, gave me the confidence to start my own business.",
+      quote: "The MBA program at VAT University transformed my career. The blend of theoretical knowledge and real-world case studies, combined with networking opportunities, gave me the confidence to start my own business.",
       rating: 5
     },
     {
@@ -34,7 +34,7 @@ const Testimonials: React.FC = () => {
       program: "Bachelor of Computer Science",
       year: "Class of 2024",
       image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-      quote: "The tech industry connections at Orange University are amazing. Through the career services and industry partnerships, I secured internships that led to a full-time offer before graduation. The curriculum is cutting-edge and relevant.",
+      quote: "The tech industry connections at VAT University are amazing. Through the career services and industry partnerships, I secured internships that led to a full-time offer before graduation. The curriculum is cutting-edge and relevant.",
       rating: 5
     },
     {
@@ -42,7 +42,7 @@ const Testimonials: React.FC = () => {
       program: "Bachelor of Environmental Science",
       year: "Class of 2022",
       image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-      quote: "Orange University's commitment to sustainability isn't just talk - it's embedded in everything they do. The hands-on field work and research opportunities gave me real experience that employers value.",
+      quote: "VAT University's commitment to sustainability isn't just talk - it's embedded in everything they do. The hands-on field work and research opportunities gave me real experience that employers value.",
       rating: 5
     }
   ];
@@ -66,7 +66,7 @@ const Testimonials: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">What Our Students Say</h2>
           <p className="text-xl text-orange-100">
-            Hear from our graduates about their Orange University experience
+            Hear from our graduates about their VAT University experience
           </p>
         </div>
 

@@ -13,11 +13,11 @@ const Hero: React.FC = () => {
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-orange-700/60"></div>
+        <div className="absolute inset-0"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
-              Shape Your Future at Orange University
+              Shape Your Future at VAT University
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-orange-100">
               Discover world-class education in the heart of regional Australia. 

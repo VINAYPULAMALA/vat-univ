@@ -114,7 +114,7 @@ const ApplyForm: React.FC<ApplyFormProps> = ({
 
           <div className="relative">
             <div className="flex items-center mb-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mr-5 shadow-lg transform -rotate-3">
+              <div className="w-16 p-2 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mr-5 shadow-lg transform -rotate-3">
                 <Search className="w-8 h-8 text-white" />
               </div>
               <div>

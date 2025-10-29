@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import Slider from "react-slick";
 import {
   Microscope,
   Dumbbell,
@@ -11,6 +11,8 @@ import {
   Sparkles,
   Camera,
 } from "lucide-react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Facilities: React.FC = () => {
   const facilities = [
@@ -18,7 +20,7 @@ const Facilities: React.FC = () => {
       icon: Microscope,
       title: "Research Laboratories",
       description:
-        "State-of-the-art labs equipped with the latest technology for cutting-edge research",
+        "State-of-the-art labs equipped with the latest technology for cutting-edge research.",
       image:
         "https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
       features: [
@@ -32,7 +34,7 @@ const Facilities: React.FC = () => {
       icon: Dumbbell,
       title: "Sports & Recreation",
       description:
-        "Comprehensive fitness facilities including gym, pool, courts, and outdoor fields",
+        "Comprehensive fitness facilities including gym, pool, courts, and outdoor fields.",
       image:
         "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
       features: ["Olympic pool", "Modern gym", "Sports courts", "Fitness classes"],
@@ -41,7 +43,7 @@ const Facilities: React.FC = () => {
       icon: Utensils,
       title: "Dining Services",
       description:
-        "Multiple dining options with healthy, diverse, and affordable meal choices",
+        "Multiple dining options with healthy, diverse, and affordable meal choices.",
       image:
         "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
       features: [
@@ -55,7 +57,7 @@ const Facilities: React.FC = () => {
       icon: Home,
       title: "Student Accommodation",
       description:
-        "Comfortable on-campus housing with modern amenities and community spaces",
+        "Comfortable on-campus housing with modern amenities and community spaces.",
       image:
         "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
       features: [
@@ -69,7 +71,7 @@ const Facilities: React.FC = () => {
       icon: Wifi,
       title: "Technology Services",
       description:
-        "Campus-wide high-speed internet, computer labs, and technical support",
+        "Campus-wide high-speed internet, computer labs, and technical support.",
       image:
         "https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
       features: ["Free WiFi", "Computer labs", "Tech support", "Software access"],
@@ -78,7 +80,7 @@ const Facilities: React.FC = () => {
       icon: Car,
       title: "Transportation & Parking",
       description:
-        "Convenient parking, shuttle services, and public transport connections",
+        "Convenient parking, shuttle services, and public transport connections.",
       image:
         "https://images.pexels.com/photos/63294/autos-technology-vw-multi-storey-car-park-63294.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
       features: [
@@ -90,10 +92,30 @@ const Facilities: React.FC = () => {
     },
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3500,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2, slidesToScroll: 1 },
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1, slidesToScroll: 1 },
+      },
+    ],
+  };
+
   return (
     <section className="py-24 bg-gradient-to-b from-white via-orange-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Title */}
+        {/* Section Title */}
         <motion.div
           className="text-center mb-20 relative group"
           initial={{ opacity: 0, y: 40 }}
@@ -120,14 +142,14 @@ const Facilities: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Facilities Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Facilities Slider */}
+        <Slider {...settings}>
           {facilities.map((facility, index) => {
             const Icon = facility.icon;
             return (
               <motion.div
                 key={index}
-                className="relative group bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 ease-in-out transform hover:-translate-y-2"
+                className="relative group bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 ease-in-out transform hover:-translate-y-2 mx-3"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2, duration: 0.7 }}
@@ -169,7 +191,7 @@ const Facilities: React.FC = () => {
               </motion.div>
             );
           })}
-        </div>
+        </Slider>
 
         {/* Quick Stats */}
         <motion.div
@@ -193,23 +215,24 @@ const Facilities: React.FC = () => {
 
 export default Facilities;
 
+/* ---------------------------------------------
+   Stat Counter Components
+--------------------------------------------- */
 
 const StatBox: React.FC<{
   end: number;
   duration: number;
   label: string;
   suffix?: string;
-}> = ({ end, duration, label, suffix = "" }) => {
-  return (
-    <div>
-      <div className="text-5xl font-extrabold mb-3 drop-shadow-md">
-        <NumberCounter end={end} duration={duration} />
-        {suffix}
-      </div>
-      <div className="text-orange-100 text-lg">{label}</div>
+}> = ({ end, duration, label, suffix = "" }) => (
+  <div>
+    <div className="text-5xl font-extrabold mb-3 drop-shadow-md">
+      <NumberCounter end={end} duration={duration} />
+      {suffix}
     </div>
-  );
-};
+    <div className="text-orange-100 text-lg">{label}</div>
+  </div>
+);
 
 const NumberCounter: React.FC<{ end: number; duration: number }> = ({
   end,
