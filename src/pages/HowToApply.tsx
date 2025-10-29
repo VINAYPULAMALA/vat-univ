@@ -87,10 +87,10 @@ const tabs = [
               <p className="text-sm text-orange-700">
                 Applications may be rejected at any stage. Contact us at{" "}
                 <a
-                  href="mailto:info@orange.edu.au"
+                  href="mailto:info@vat.vic.edu.au"
                   className="font-semibold underline"
                 >
-                  info@orange.edu.au
+                  info@vat.vic.edu.au
                 </a>{" "}
                 if needed.
               </p>

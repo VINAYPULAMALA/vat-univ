@@ -365,7 +365,7 @@ const Header: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2 hover:text-orange-200 transition-all duration-300 cursor-pointer">
                 <Mail className="w-4 h-4" />
-                <span>info@orange.edu.au</span>
+                <span>info@vat.vic.edu.au</span>
               </div>
             </div>
             <div className="hidden md:flex space-x-6">
@@ -415,7 +415,7 @@ const Header: React.FC = () => {
                     : "bg-gradient-to-r from-orange-600 to-orange-500 text-transparent"
                 }`}
               >
-                Orange
+                VAT
               </div>
               <div
                 className={`ml-2 text-sm border-l-2 border-orange-200 pl-2 ${

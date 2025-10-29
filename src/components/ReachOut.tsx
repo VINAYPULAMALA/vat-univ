@@ -44,7 +44,7 @@ const ReachOut: React.FC = () => {
     {
       icon: Mail,
       title: "Email Us",
-      info: "info@orange.edu.au",
+      info: "info@vat.vic.edu.au",
       description: "We'll respond within 24 hours",
       action: "Send Email"
     },

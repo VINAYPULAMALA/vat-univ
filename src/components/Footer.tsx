@@ -95,7 +95,7 @@ const Footer = () => {
               {[
                 { icon: MapPin, text: '123 University Avenue, Sydney NSW 2000, Australia' },
                 { icon: Phone, text: '(02) 6365 7500' },
-                { icon: Mail, text: 'info@orange.edu.au' }
+                { icon: Mail, text: 'info@vat.vic.edu.au' }
               ].map((item, index) => {
                 const Icon = item.icon as React.ElementType;
                 return (

@@ -14,7 +14,7 @@ import CommercialCookery from "./pages/CommercialCookery";
 import KitchenManagement from "./pages/KitchenManagement";
 import HospitalityManagement from "./pages/HospitalityManagement";
 import ManagementLearning from "./pages/ManagementLearning";
-
+import ApplyOnlinePage from "./pages/Contact";
 function App() {
   return (
     <div className="min-h-screen">
@@ -31,6 +31,7 @@ function App() {
         <Route path="/kitchen-management" element={<KitchenManagement />} />
         <Route path="/hospitality-management" element={<HospitalityManagement />} />
         <Route path="/management-learning" element={<ManagementLearning />} />
+        <Route path="/enquiry" element={<ApplyOnlinePage />} />
 
       </Routes>
       <Footer />
