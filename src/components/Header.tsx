@@ -85,67 +85,67 @@ const Header: React.FC = () => {
         },
       ],
     },
-    {
-      label: "WHY ORANGE",
-      href: "/whyorange",
-      dropdown: [
-        {
-          label: "What We Offer",
-          href: "#",
-          subItems: [
-            { label: "Academic Excellence", href: "#" },
-            { label: "Industry Connections", href: "#" },
-            { label: "Research Opportunities", href: "#" },
-            { label: "Student Support", href: "#" },
-            { label: "Campus Facilities", href: "#" },
-          ],
-        },
-        {
-          label: "Our History",
-          href: "#",
-          subItems: [
-            { label: "Foundation Story", href: "#" },
-            { label: "Key Milestones", href: "#" },
-            { label: "Notable Alumni", href: "#" },
-            { label: "Heritage Buildings", href: "#" },
-            { label: "Timeline", href: "#" },
-          ],
-        },
-        {
-          label: "Our Mission",
-          href: "#",
-          subItems: [
-            { label: "Vision Statement", href: "#" },
-            { label: "Core Values", href: "#" },
-            { label: "Strategic Plan", href: "#" },
-            { label: "Community Commitment", href: "#" },
-            { label: "Sustainability Goals", href: "#" },
-          ],
-        },
-        {
-          label: "Meet Our Team",
-          href: "#",
-          subItems: [
-            { label: "Leadership Team", href: "#" },
-            { label: "Academic Staff", href: "#" },
-            { label: "Support Staff", href: "#" },
-            { label: "Board Members", href: "#" },
-            { label: "Advisory Council", href: "#" },
-          ],
-        },
-        {
-          label: "Awards",
-          href: "#",
-          subItems: [
-            { label: "Teaching Excellence", href: "#" },
-            { label: "Research Recognition", href: "#" },
-            { label: "Industry Partnerships", href: "#" },
-            { label: "Student Achievements", href: "#" },
-            { label: "Community Awards", href: "#" },
-          ],
-        },
-      ],
-    },
+    // {
+    //   label: "WHY ORANGE",
+    //   href: "/whyorange",
+    //   dropdown: [
+    //     {
+    //       label: "What We Offer",
+    //       href: "#",
+    //       subItems: [
+    //         { label: "Academic Excellence", href: "#" },
+    //         { label: "Industry Connections", href: "#" },
+    //         { label: "Research Opportunities", href: "#" },
+    //         { label: "Student Support", href: "#" },
+    //         { label: "Campus Facilities", href: "#" },
+    //       ],
+    //     },
+    //     {
+    //       label: "Our History",
+    //       href: "#",
+    //       subItems: [
+    //         { label: "Foundation Story", href: "#" },
+    //         { label: "Key Milestones", href: "#" },
+    //         { label: "Notable Alumni", href: "#" },
+    //         { label: "Heritage Buildings", href: "#" },
+    //         { label: "Timeline", href: "#" },
+    //       ],
+    //     },
+    //     {
+    //       label: "Our Mission",
+    //       href: "#",
+    //       subItems: [
+    //         { label: "Vision Statement", href: "#" },
+    //         { label: "Core Values", href: "#" },
+    //         { label: "Strategic Plan", href: "#" },
+    //         { label: "Community Commitment", href: "#" },
+    //         { label: "Sustainability Goals", href: "#" },
+    //       ],
+    //     },
+    //     {
+    //       label: "Meet Our Team",
+    //       href: "#",
+    //       subItems: [
+    //         { label: "Leadership Team", href: "#" },
+    //         { label: "Academic Staff", href: "#" },
+    //         { label: "Support Staff", href: "#" },
+    //         { label: "Board Members", href: "#" },
+    //         { label: "Advisory Council", href: "#" },
+    //       ],
+    //     },
+    //     {
+    //       label: "Awards",
+    //       href: "#",
+    //       subItems: [
+    //         { label: "Teaching Excellence", href: "#" },
+    //         { label: "Research Recognition", href: "#" },
+    //         { label: "Industry Partnerships", href: "#" },
+    //         { label: "Student Achievements", href: "#" },
+    //         { label: "Community Awards", href: "#" },
+    //       ],
+    //     },
+    //   ],
+    // },
     {
       label: "HOW TO APPLY",
       href: "/howtoapply",
