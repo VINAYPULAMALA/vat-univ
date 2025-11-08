@@ -1,17 +1,8 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Sparkles, Camera } from 'lucide-react';
+import React from "react";
+import { Sparkles, Camera } from "lucide-react";
+import AccordionGroup from "./AccordionGroup";
 
 const FAQ: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const toggleItem = (index: number) => {
-    setOpenItems(prev =>
-      prev.includes(index)
-        ? prev.filter(item => item !== index)
-        : [...prev, index]
-    );
-  };
-
   const faqCategories = [
     {
       title: "Admissions",
@@ -19,17 +10,12 @@ const FAQ: React.FC = () => {
         {
           question: "What are the admission requirements?",
           answer:
-            "Admission requirements vary by program. Generally, you'll need a high school diploma or equivalent, satisfactory grades, and may need to meet specific prerequisites for your chosen field of study. International students may need to demonstrate English proficiency through IELTS or TOEFL scores.",
+            "You’ll need a high school diploma or equivalent and may need to meet program-specific prerequisites.",
         },
         {
           question: "When are the application deadlines?",
           answer:
-            "Application deadlines vary by program and intake. For most undergraduate programs, applications for Semester 1 (February start) close in December, and Semester 2 (July start) applications close in May. We recommend applying early as some programs have limited places.",
-        },
-        {
-          question: "How do I apply for scholarships?",
-          answer:
-            "Scholarship applications are typically submitted alongside your course application. We offer merit-based scholarships, need-based assistance, and specific scholarships for international students. Check our scholarships page for current opportunities and eligibility criteria.",
+            "Semester 1 (February) applications close in December, and Semester 2 (July) applications close in May.",
         },
       ],
     },
@@ -37,146 +23,55 @@ const FAQ: React.FC = () => {
       title: "Academic Life",
       questions: [
         {
-          question: "What support services are available for students?",
-          answer:
-            "We provide comprehensive support including academic tutoring, career counseling, mental health services, disability support, and international student services. Our Student Success Center coordinates these services to ensure every student has the support they need.",
-        },
-        {
-          question: "Can I study part-time?",
-          answer:
-            "Yes, many of our programs offer part-time study options. Part-time study allows you to balance work and other commitments while pursuing your degree. Contact our admissions team to discuss part-time options for your chosen program.",
-        },
-        {
           question: "Are online courses available?",
           answer:
-            "We offer a range of online and hybrid courses across various disciplines. Our online learning platform provides interactive content, virtual labs, and real-time collaboration tools to ensure a quality educational experience.",
-        },
-      ],
-    },
-    {
-      title: "Campus Life",
-      questions: [
-        {
-          question: "What accommodation options are available?",
-          answer:
-            "We offer on-campus residential colleges, apartments, and shared accommodation. All options include internet access, utilities, and access to common areas. We also provide assistance in finding off-campus housing through our accommodation service.",
-        },
-        {
-          question: "What clubs and societies can I join?",
-          answer:
-            "VAT University has over 100 student clubs and societies covering academic interests, sports, cultural activities, and special interests. Joining clubs is a great way to meet people, develop skills, and enhance your university experience.",
-        },
-        {
-          question: "Is there parking available on campus?",
-          answer:
-            "Yes, we provide parking for students, staff, and visitors. Student parking permits are available for purchase each semester. We also encourage sustainable transport options including bike storage facilities and public transport connections.",
-        },
-      ],
-    },
-    {
-      title: "Financial Information",
-      questions: [
-        {
-          question: "What are the tuition fees?",
-          answer:
-            "Tuition fees vary by program and student status (domestic/international). Domestic students may be eligible for government assistance through HECS-HELP. Detailed fee information is available on our website and will be provided with your offer letter.",
-        },
-        {
-          question: "Are payment plans available?",
-          answer:
-            "Yes, we offer flexible payment plans to help manage tuition costs. Students can pay fees in installments throughout the semester. Contact our Student Finance office to discuss payment options that work for your situation.",
-        },
-        {
-          question: "What additional costs should I budget for?",
-          answer:
-            "In addition to tuition, budget for textbooks, accommodation, meals, transport, and personal expenses. We estimate living costs at approximately $20,000-25,000 per year for domestic students and $25,000-30,000 for international students.",
+            "Yes, we offer both online and hybrid learning options with access to digital labs and real-time collaboration tools.",
         },
       ],
     },
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading Section */}
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
         <div className="text-center mb-16 relative group">
           <div className="flex justify-center items-center gap-4 mb-6">
-            <Sparkles className="w-8 h-8 text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:-rotate-12" />
+            <Sparkles className="w-8 h-8 text-orange-400" />
             <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-400 via-amber-400 to-orange-600 bg-clip-text text-transparent relative inline-block">
               Frequently Asked Questions
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400/80 to-amber-200/80 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
             </h2>
-            <Sparkles className="w-8 h-8 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:rotate-12" />
+            <Sparkles className="w-8 h-8 text-amber-400" />
           </div>
 
-          <div className="max-w-2xl mx-auto relative">
+          <div className="max-w-2xl mx-auto">
             <p className="text-xl text-gray-600 mb-4 font-medium">
               <Camera className="inline-block w-6 h-6 text-orange-500 mr-2 -mt-1" />
               Find answers to common questions about{" "}
-              <span className="relative px-2 mx-1 bg-gradient-to-r from-amber-100 to-orange-100">
+              <span className="font-semibold text-orange-600">
                 VAT University
-                <div className="absolute inset-0 bg-white/50 mix-blend-overlay animate-pulse"></div>
               </span>
             </p>
-            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-orange-400 to-amber-300 rounded-full opacity-30 group-hover:opacity-70 transition-opacity duration-300"></div>
           </div>
         </div>
 
         {/* FAQ Categories */}
-        <div className="space-y-8">
-          {faqCategories.map((category, categoryIndex) => (
-            <div
-              key={categoryIndex}
-              className="bg-white rounded-lg shadow-lg overflow-hidden"
-            >
-              <div className="bg-orange-600 text-white px-6 py-4">
-                <h3 className="text-xl font-semibold">{category.title}</h3>
-              </div>
-              <div className="divide-y divide-gray-200">
-                {category.questions.map((faq, faqIndex) => {
-                  const currentIndex = categoryIndex * 100 + faqIndex;
-                  const isOpen = openItems.includes(currentIndex);
-
-                  return (
-                    <div key={faqIndex}>
-                      <button
-                        onClick={() => toggleItem(currentIndex)}
-                        aria-expanded={isOpen}
-                        className="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center"
-                      >
-                        <span className="font-medium text-gray-900 pr-4">
-                          {faq.question}
-                        </span>
-                        {isOpen ? (
-                          <ChevronUp className="w-5 h-5 text-orange-600 flex-shrink-0" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5 text-orange-600 flex-shrink-0" />
-                        )}
-                      </button>
-                      {isOpen && (
-                        <div className="px-6 pb-4">
-                          <p className="text-gray-600 leading-relaxed">
-                            {faq.answer}
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
+        {faqCategories.map((category, index) => (
+          <div key={index} className="mb-10">
+            <div className="bg-orange-600 text-white px-6 py-4 rounded-t-lg shadow-sm">
+              <h3 className="text-xl font-semibold">{category.title}</h3>
             </div>
-          ))}
-        </div>
 
-        {/* Contact CTA */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">Still have questions?</p>
-          <button className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
-            Contact Our Support Team
-          </button>
-        </div>
+            <AccordionGroup
+              items={category.questions.map((q) => ({
+                title: q.question,
+                content: q.answer,
+              }))}
+              color="orange"
+            />
+          </div>
+        ))}
+
       </div>
-    </section>
   );
 };
 
