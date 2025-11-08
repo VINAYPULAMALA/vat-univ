@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center">
               <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-                Orange
+                VAT
               </span>
               <div className="flex flex-col ml-2 mt-1 border-l-2 border-orange-500/30 pl-2">
                 <span className="text-xs font-medium tracking-widest text-orange-400">UNIVERSITY</span>

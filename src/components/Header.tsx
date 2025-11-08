@@ -108,7 +108,7 @@ const Header: React.FC = () => {
       dropdown: [
         {
           label: "Student Handbook",
-          href: "#",
+          href: "https://www.vat.vic.edu.au/wp-content/uploads/2025/07/VATs-Student-Handbook.pdf",
         },
         {
           label: "Forms & Policies",
@@ -116,11 +116,11 @@ const Header: React.FC = () => {
         },
         {
           label: "ESOS Framework",
-          href: "#",
+          href: "https://www.education.gov.au/esos-framework",
         },
         {
           label: "Agent Representatives",
-          href: "#",
+          href: "/agent-representative",
         },
       ],
     },
@@ -222,8 +222,8 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex items-center transform hover:scale-105 transition-transform duration-300">
-              <div
+            <div className="flex items-center transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <div onClick={() => window.location.href = '/'}
                 className={`text-3xl font-bold bg-clip-text ${
                   scrolled
                     ? "text-white"
@@ -231,7 +231,7 @@ const Header: React.FC = () => {
                 }`}
               >
                 VAT
-              </div>
+              </div>  
               <div
                 className={`ml-2 text-sm border-l-2 border-orange-200 pl-2 ${
                   scrolled ? "text-white border-orange-300" : "text-gray-600"

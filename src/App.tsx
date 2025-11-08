@@ -2,7 +2,6 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-``;
 import HomePage from "./pages/HomePage";
 import CoursesPage from "./pages/CoursesPage";
 import WhyOrange from "./pages/WhyOrange";
@@ -15,6 +14,8 @@ import KitchenManagement from "./pages/KitchenManagement";
 import HospitalityManagement from "./pages/HospitalityManagement";
 import ManagementLearning from "./pages/ManagementLearning";
 import ApplyOnlinePage from "./pages/Contact";
+import Agent from "./pages/AgentRepresentative";
+import AdmissionsPage from "./pages/Forms";
 function App() {
   return (
     <div className="min-h-screen">
@@ -32,6 +33,8 @@ function App() {
         <Route path="/hospitality-management" element={<HospitalityManagement />} />
         <Route path="/management-learning" element={<ManagementLearning />} />
         <Route path="/enquiry" element={<ApplyOnlinePage />} />
+        <Route path="/agent-representative" element={<Agent />} />
+        <Route path="/forms-and-policies/" element={<AdmissionsPage />} />
 
       </Routes>
       <Footer />

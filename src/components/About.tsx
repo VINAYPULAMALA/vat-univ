@@ -5,6 +5,7 @@ interface AboutProps {
   description: string[];
   buttonText: string;
   imageUrl: string;
+  href: string;
   stats: {
     icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     number: string;
@@ -19,6 +20,7 @@ const About: React.FC<AboutProps> = ({
   buttonText,
   imageUrl,
   stats,
+  href,
   index = 0,
 }) => {
   const imagePosition = index % 2 === 0 ? "right" : "left";
@@ -44,7 +46,9 @@ const About: React.FC<AboutProps> = ({
                 </p>
               ))}
               <a
-                href="/about"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-700 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
                 aria-label={`Learn more about ${title}`}
               >

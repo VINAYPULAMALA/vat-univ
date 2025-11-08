@@ -1,335 +1,107 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
-
+import { useNavigate } from 'react-router-dom';
 const CoursesPage: React.FC = () => {
   const [showApplyModal, setShowApplyModal] = useState(false);
+  const navigate = useNavigate();
 
   const courseSections = [
     {
-      id: 'building-construction',
-      heading: 'Building & Construction Hub',
+      id: 'CHC TRAINING PACKAGE',
+      heading: 'CHC TRAINING PACKAGE',
       subheading: 'Ready to build your career with a strong foundation? Check out our range of building and construction courses for tradies and get started!',
       image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop',
       bgColor: 'bg-orange-50',
       courses: [
         {
-          code: 'CPC40320',
-          title: 'Certificate IV in Building Project Support (Estimator)',
-          description: 'Are you ready to become a building estimator/scheduler? Get in touch with one of our friendly support people to learn more or continue reading below.',
+          code: 'CHC50121 ',
+          title: 'Diploma of Early Childhood Education and Care',
+          description: 'Our mission is to engage learners in meaningful educational experiences that equip them with practical skills and empower them for lifelong growth. Through excellence in training, a supportive environment, and industry-aligned programs, we aim to foster confident, skilled individuals who can thrive in dynamic environments.',
           location: 'Port Melbourne campus',
-          studentType: 'International'
+          studentType: 'International',
+          href: '/early-childhood-education'
         },
         {
-          code: 'CPC30220',
-          title: 'Certificate III in Carpentry',
-          description: 'Develop practical carpentry skills and learn to work with timber, steel, and other building materials in residential and commercial construction.',
-          location: 'Orange campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'CPC40120',
-          title: 'Certificate IV in Building and Construction',
-          description: 'Advance your construction career with project management skills, building codes knowledge, and leadership capabilities.',
-          location: 'Sydney campus',
-          studentType: 'International'
-        },
-        {
-          code: 'CPC50220',
-          title: 'Diploma of Building and Construction',
-          description: 'Comprehensive program covering construction management, contract administration, and building technology for senior roles.',
-          location: 'Melbourne campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'CPC31020',
-          title: 'Certificate III in Bricklaying/Blocklaying',
-          description: 'Master the art of bricklaying and blocklaying with hands-on training in traditional and modern construction techniques.',
-          location: 'Orange campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'CPC32020',
-          title: 'Certificate III in Painting and Decorating',
-          description: 'Learn professional painting techniques, surface preparation, and decorative finishes for residential and commercial projects.',
-          location: 'Port Melbourne campus',
-          studentType: 'International'
-        },
-        {
-          code: 'CPC33020',
-          title: 'Certificate III in Plumbing',
-          description: 'Comprehensive plumbing training covering installation, maintenance, and repair of water, gas, and drainage systems.',
-          location: 'Sydney campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'CPC30620',
-          title: 'Certificate III in Roof Tiling',
-          description: 'Specialized training in roof tiling techniques, safety procedures, and installation of various roofing materials.',
-          location: 'Melbourne campus',
-          studentType: 'International'
+          code: 'CHC30121 ',
+          title: 'Certificate III in Early Childhood Education and Care',
+          description: 'Our mission is to engage learners in meaningful educational experiences that equip them with practical skills and empower them for lifelong growth. Through excellence in training, a supportive environment, and industry-aligned programs, we aim to foster confident, skilled individuals who can thrive in dynamic environments.',
+          location: 'VAT campus',
+          studentType: 'Domestic',
+          href: '/early-childhood'
         }
       ]
     },
     {
-      id: 'business-leadership',
-      heading: 'Business & Leadership Hub',
+      id: 'SIT TRAINING PACKAGE',
+      heading: 'SIT TRAINING PACKAGE',
       subheading: 'Develop your business acumen and leadership skills with our comprehensive range of business courses designed for future leaders.',
       image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop',
       bgColor: 'bg-blue-50',
       courses: [
         {
-          code: 'BSB50420',
-          title: 'Diploma of Leadership and Management',
-          description: 'Develop essential leadership skills and learn to manage teams effectively in dynamic business environments.',
+          code: 'SIT40521',
+          title: ' Certificate IV in Kitchen Management',
+          description: 'This qualification reflects the role of chefs and cooks who have a supervisory or team leading role in the kitchen. They operate independently or with limited guidance from others and use discretion to solve non-routine problems. This qualification provides a pathway to work in organisations such as restaurants, hotels, clubs, pubs, cafes and coffee shops, or to run a small business in these sectors. The skills in this qualification must be applied in accordance with Commonwealth and State or Territory legislation, Australian standards and industry codes of practice.',
           location: 'Orange campus',
-          studentType: 'Domestic'
+          studentType: 'Domestic',
+          href: '/kitchen-management'
         },
         {
-          code: 'BSB40520',
-          title: 'Certificate IV in Leadership and Management',
-          description: 'Build foundational management skills and learn to lead small teams with confidence and effectiveness.',
+          code: 'SIT50422',
+          title: 'Diploma of Hospitality Management',
+          description: 'This qualification reflects the role of highly skilled senior operators who use a broad range of hospitality skills combined with managerial skills and sound knowledge of industry to coordinate hospitality operations. They operate independently, have responsibility for others and make a range of operational business decisions.',
           location: 'Sydney campus',
-          studentType: 'International'
+          studentType: 'International',
+          href: '/hospitality-management'
         },
         {
-          code: 'BSB50320',
-          title: 'Diploma of Marketing and Communication',
-          description: 'Master modern marketing strategies, digital communication, and brand management for competitive business advantage.',
+          code: 'SIT30821',
+          title: ' Certificate III in Commercial Cookery',
+          description: 'This qualification reflects the role of cooks who use a wide range of cookery skills and knowledge to prepare food and menu items in various hospitality settings. They work under limited supervision and are responsible for the preparation and presentation of food in accordance with food safety standards.',
           location: 'Melbourne campus',
-          studentType: 'Domestic'
+          studentType: 'Domestic',
+          href: '/commercial-cookery'
         },
-        {
-          code: 'BSB30120',
-          title: 'Certificate III in Business',
-          description: 'Essential business skills covering administration, customer service, and workplace communication for entry-level positions.',
-          location: 'Port Melbourne campus',
-          studentType: 'International'
-        },
-        {
-          code: 'BSB50820',
-          title: 'Diploma of Project Management',
-          description: 'Comprehensive project management training covering planning, execution, and delivery of complex business projects.',
-          location: 'Orange campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'BSB40820',
-          title: 'Certificate IV in Marketing and Communication',
-          description: 'Learn marketing fundamentals, social media strategies, and communication techniques for modern business success.',
-          location: 'Sydney campus',
-          studentType: 'International'
-        },
-        {
-          code: 'BSB50620',
-          title: 'Diploma of Human Resources Management',
-          description: 'Develop expertise in recruitment, employee relations, and HR strategy to drive organizational success.',
-          location: 'Melbourne campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'BSB40920',
-          title: 'Certificate IV in Small Business Management',
-          description: 'Perfect for entrepreneurs and small business owners looking to develop management and operational skills.',
-          location: 'Port Melbourne campus',
-          studentType: 'International'
-        }
+       
       ]
     },
     {
-      id: 'hospitality-tourism',
-      heading: 'Hospitality & Tourism Hub',
+      id: 'CPC TRAINING PACKAGE',
+      heading: 'CPC TRAINING PACKAGE',
       subheading: 'Join the exciting world of hospitality and tourism with our industry-focused courses that prepare you for global career opportunities.',
       image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop',
       bgColor: 'bg-green-50',
       courses: [
         {
-          code: 'SIT50422',
-          title: 'Diploma of Hospitality Management',
-          description: 'Comprehensive hospitality management program covering operations, customer service, and business development in the hospitality industry.',
+          code: 'CPC30220',
+          title: ' Certificate III in Carpentry',
+          description: 'This is a trade qualification for carpenters in residential and commercial workplaces. It includes setting out, manufacturing, constructing, assembling, installing and repairing products made using timber and non-timber materials.',
           location: 'Sydney campus',
-          studentType: 'International'
+          studentType: 'International',
+          href: '/carpentry'
         },
-        {
-          code: 'SIT40521',
-          title: 'Certificate IV in Kitchen Management',
-          description: 'Advanced culinary skills and kitchen management training for aspiring head chefs and kitchen supervisors.',
-          location: 'Melbourne campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'SIT30821',
-          title: 'Certificate III in Commercial Cookery',
-          description: 'Professional cooking skills and food preparation techniques for commercial kitchen environments and restaurants.',
-          location: 'Orange campus',
-          studentType: 'International'
-        },
-        {
-          code: 'SIT50122',
-          title: 'Diploma of Travel and Tourism Management',
-          description: 'Explore the tourism industry with comprehensive training in travel planning, destination management, and customer service.',
-          location: 'Port Melbourne campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'SIT40422',
-          title: 'Certificate IV in Hospitality',
-          description: 'Develop supervisory skills and advanced hospitality knowledge for leadership roles in hotels, restaurants, and events.',
-          location: 'Sydney campus',
-          studentType: 'International'
-        },
-        {
-          code: 'SIT31021',
-          title: 'Certificate III in Hospitality',
-          description: 'Foundation hospitality skills covering food service, accommodation services, and customer interaction.',
-          location: 'Melbourne campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'SIT40722',
-          title: 'Certificate IV in Patisserie',
-          description: 'Specialized pastry and dessert making skills for professional patisseries, hotels, and fine dining establishments.',
-          location: 'Orange campus',
-          studentType: 'International'
-        },
-        {
-          code: 'SIT50322',
-          title: 'Diploma of Event Management',
-          description: 'Plan and execute successful events with training in project management, vendor coordination, and client relations.',
-          location: 'Port Melbourne campus',
-          studentType: 'Domestic'
-        }
+       
       ]
     },
     {
-      id: 'health-community',
-      heading: 'Health & Community Hub',
+      id: 'BSB TRAINING PACKAGE',
+      heading: 'BSB TRAINING PACKAGE',
       subheading: 'Make a difference in people\'s lives with our health and community services courses that prepare you for rewarding careers in care.',
       image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop',
       bgColor: 'bg-purple-50',
       courses: [
         {
-          code: 'CHC43015',
-          title: 'Certificate IV in Ageing Support',
-          description: 'Provide quality care and support for elderly clients in residential and community settings with compassion and professionalism.',
+          code: 'BSB80120',
+          title: '  Graduate Diploma of Management (Learning)',
+          description: 'This qualification reflects the role of individuals who apply highly specialised knowledge and skills in the field of organisational learning and capability development. Individuals in these roles generate and evaluate complex ideas. They also initiate, design and execute major learning and development functions within an organisation. Typically, they would have full responsibility and accountability for the personal output and work of others.',
           location: 'Orange campus',
-          studentType: 'Domestic'
+          studentType: 'Domestic',
+          href: '/management-learning'
         },
-        {
-          code: 'CHC33021',
-          title: 'Certificate III in Individual Support',
-          description: 'Essential skills for supporting people with disabilities, elderly clients, and those requiring home and community care.',
-          location: 'Sydney campus',
-          studentType: 'International'
-        },
-        {
-          code: 'CHC52021',
-          title: 'Diploma of Community Services',
-          description: 'Advanced community work skills for case management, program development, and client advocacy in social services.',
-          location: 'Melbourne campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'HLT33115',
-          title: 'Certificate III in Health Services Assistance',
-          description: 'Support healthcare teams in hospitals and clinics with patient care, administration, and clinical assistance skills.',
-          location: 'Port Melbourne campus',
-          studentType: 'International'
-        },
-        {
-          code: 'CHC43121',
-          title: 'Certificate IV in Mental Health Peer Work',
-          description: 'Specialized training for providing peer support to people experiencing mental health challenges and recovery.',
-          location: 'Orange campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'CHC30221',
-          title: 'Certificate III in School Based Education Support',
-          description: 'Support students and teachers in educational settings with classroom assistance and learning support skills.',
-          location: 'Sydney campus',
-          studentType: 'International'
-        },
-        {
-          code: 'CHC50121',
-          title: 'Diploma of Early Childhood Education and Care',
-          description: 'Comprehensive early childhood education program preparing you to lead and educate young children.',
-          location: 'Melbourne campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'HLT43015',
-          title: 'Certificate IV in Allied Health Assistance',
-          description: 'Support allied health professionals in physiotherapy, occupational therapy, and other rehabilitation services.',
-          location: 'Port Melbourne campus',
-          studentType: 'International'
-        }
+       
       ]
     },
-    {
-      id: 'creative-design',
-      heading: 'Creative & Design Hub',
-      subheading: 'Unleash your creativity and turn your artistic passion into a professional career with our innovative design and creative courses.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop',
-      bgColor: 'bg-pink-50',
-      courses: [
-        {
-          code: 'CUA50720',
-          title: 'Diploma of Graphic Design',
-          description: 'Master visual communication, branding, and digital design tools to create compelling graphics for print and digital media.',
-          location: 'Melbourne campus',
-          studentType: 'International'
-        },
-        {
-          code: 'CUA40720',
-          title: 'Certificate IV in Design',
-          description: 'Foundation design skills covering visual elements, design principles, and creative problem-solving across multiple disciplines.',
-          location: 'Sydney campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'ICT50220',
-          title: 'Diploma of Information Technology (Web Development)',
-          description: 'Comprehensive web development training covering front-end and back-end technologies for modern web applications.',
-          location: 'Orange campus',
-          studentType: 'International'
-        },
-        {
-          code: 'CUA31020',
-          title: 'Certificate III in Visual Arts',
-          description: 'Explore various artistic mediums and develop your creative skills in drawing, painting, sculpture, and mixed media.',
-          location: 'Port Melbourne campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'CUA51020',
-          title: 'Diploma of Screen and Media',
-          description: 'Film production, video editing, and multimedia content creation for television, online media, and entertainment industry.',
-          location: 'Melbourne campus',
-          studentType: 'International'
-        },
-        {
-          code: 'CUA40920',
-          title: 'Certificate IV in Photography and Photo Imaging',
-          description: 'Professional photography techniques, digital imaging, and commercial photography for various industry applications.',
-          location: 'Sydney campus',
-          studentType: 'Domestic'
-        },
-        {
-          code: 'CUA50420',
-          title: 'Diploma of Interior Design',
-          description: 'Create functional and beautiful interior spaces with training in space planning, color theory, and design software.',
-          location: 'Orange campus',
-          studentType: 'International'
-        },
-        {
-          code: 'ICT40120',
-          title: 'Certificate IV in Information Technology',
-          description: 'Essential IT skills covering networking, cybersecurity, and system administration for modern technology environments.',
-          location: 'Port Melbourne campus',
-          studentType: 'Domestic'
-        }
-      ]
-    }
+   
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -364,7 +136,7 @@ const CoursesPage: React.FC = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <button 
-                    onClick={() => scrollToSection('building-construction')}
+                    onClick={() => scrollToSection('CHC TRAINING PACKAGE')}
                     className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     Browse Courses
@@ -444,13 +216,21 @@ const CoursesPage: React.FC = () => {
                     />
                   </div>
                   <div className="lg:w-1/2 text-left lg:text-left">
+                  
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                       {section.heading}
                     </h2>
                     <p className="text-lg text-gray-600">
                       {section.subheading}
                     </p>
+                    <button
+                      onClick={() => setShowApplyModal(true)}
+                      className="w-64 bg-orange-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-200"
+                    >
+                      Apply Online
+                    </button>
                   </div>
+                  
                 </div>
               </div>
               
@@ -484,10 +264,10 @@ const CoursesPage: React.FC = () => {
                     </div>
                     
                     <button
-                      onClick={() => setShowApplyModal(true)}
+                      onClick={() => navigate(course.href)}
                       className="w-full bg-orange-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-200"
                     >
-                      Apply Online
+                      Know More 
                     </button>
                   </div>
                 ))}
