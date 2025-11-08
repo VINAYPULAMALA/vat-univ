@@ -395,10 +395,7 @@ const Header: React.FC = () => {
                 <div key={item.label}>
                   <a
                     href={item.href || "#"}
-                    className={`block font-medium py-3 px-2 border-b border-gray-100 ${
-                      scrolled
-                        ? "text-white hover:text-orange-200"
-                        : "text-gray-700 hover:text-orange-600"
+                    className={`block font-medium text-gray-700 hover:text-orange-200 py-3 px-2 border-b border-gray-100 
                     }`}
                   >
                     {item.label}

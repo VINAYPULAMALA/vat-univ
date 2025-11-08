@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import StepTimeline from "./StepTimelineWithIcons";
 import { X, Search, Info, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface CourseInfo {
   code: string;
@@ -82,7 +83,10 @@ const ApplyForm: React.FC<ApplyFormProps> = ({
 
   // show only 5 unless showAll is true
   const visibleUnits = showAll ? filteredUnits : filteredUnits.slice(0, 5);
-
+  const navigate = useNavigate();
+const handleClick = () => {
+  navigate("/enquiry");
+};
   const content = (
     <div
       className={`bg-white ${
@@ -188,7 +192,9 @@ const ApplyForm: React.FC<ApplyFormProps> = ({
               ))}
             </div>
 
-            <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 mb-10 flex items-center justify-center space-x-2">
+            <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 mb-10 flex items-center justify-center space-x-2"
+            onClick={handleClick}
+            >
               <span>APPLY NOW</span>
               <ChevronRight className="w-5 h-5" />
             </button>

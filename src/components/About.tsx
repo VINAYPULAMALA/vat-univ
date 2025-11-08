@@ -5,7 +5,7 @@ interface AboutProps {
   description: string[];
   buttonText: string;
   imageUrl: string;
-  href: string;
+  href?: string;
   stats: {
     icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     number: string;

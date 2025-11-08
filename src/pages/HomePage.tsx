@@ -21,9 +21,11 @@ const HomePage = () => (
       description={[
         'Study! Your Future Is Here!',
         'At VAT (Vocational Augment Training), We’re not just an RTO – we’re a community that supports and empowers each student. We welcome you to join us and take the first step toward a rewarding and successful career. To be a transformative leader in vocational education by engaging, educating, equipping, and empowering individuals to reach their full potential through practical, high-quality learning experiences....'
-      ]}
+      ]
+    }
       buttonText="Discover Our Story"
       imageUrl={college_1}
+      href='/whyorange'
       stats={[
         { icon: Users, number: "15,000+", label: "Students" },
         { icon: Globe, number: "60+", label: "Countries" },
