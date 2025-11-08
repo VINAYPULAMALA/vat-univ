@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import {
   Menu,
   X,
@@ -36,10 +38,11 @@ const Header: React.FC = () => {
   const menuItems: MenuItem[] = [
     {
       label: "OUR COURSES",
+      href: "/courses",
       dropdown: [
         {
           label: "CHC TRAINING PACKAGE",
-          href: "/courses",
+          href: "#",
           subItems: [
             {
               label: "CHC30121 – Certificate III in Early Childhood",
@@ -53,7 +56,7 @@ const Header: React.FC = () => {
         },
         {
           label: "SIT TRAINING PACKAGE",
-          href: "/courses",
+          href: "#",
           subItems: [
             {
               label: "SIT30821 – Certificate III in Commercial Cookery",
@@ -71,261 +74,61 @@ const Header: React.FC = () => {
         },
         {
           label: "CPC TRAINING PACKAGE",
-          href: "/courses",
+          href: "#",
           subItems: [
-            { label: "CPC30220 – Certificate III in Carpentry", href: "/carpentry",},
+            {
+              label: "CPC30220 – Certificate III in Carpentry",
+              href: "/carpentry",
+            },
           ],
         },
         {
           label: "BSB TRAINING PACKAGE",
-          href: "/courses",
+          href: "#",
           subItems: [
-            { label: "BSB80120 - Graduate Diploma of Management", href: "/management-learning" },
+            {
+              label: "BSB80120 - Graduate Diploma of Management",
+              href: "/management-learning",
+            },
           ],
         },
       ],
     },
-    // {
-    //   label: "WHY ORANGE",
-    //   href: "/whyorange",
-    //   dropdown: [
-    //     {
-    //       label: "What We Offer",
-    //       href: "#",
-    //       subItems: [
-    //         { label: "Academic Excellence", href: "#" },
-    //         { label: "Industry Connections", href: "#" },
-    //         { label: "Research Opportunities", href: "#" },
-    //         { label: "Student Support", href: "#" },
-    //         { label: "Campus Facilities", href: "#" },
-    //       ],
-    //     },
-    //     {
-    //       label: "Our History",
-    //       href: "#",
-    //       subItems: [
-    //         { label: "Foundation Story", href: "#" },
-    //         { label: "Key Milestones", href: "#" },
-    //         { label: "Notable Alumni", href: "#" },
-    //         { label: "Heritage Buildings", href: "#" },
-    //         { label: "Timeline", href: "#" },
-    //       ],
-    //     },
-    //     {
-    //       label: "Our Mission",
-    //       href: "#",
-    //       subItems: [
-    //         { label: "Vision Statement", href: "#" },
-    //         { label: "Core Values", href: "#" },
-    //         { label: "Strategic Plan", href: "#" },
-    //         { label: "Community Commitment", href: "#" },
-    //         { label: "Sustainability Goals", href: "#" },
-    //       ],
-    //     },
-    //     {
-    //       label: "Meet Our Team",
-    //       href: "#",
-    //       subItems: [
-    //         { label: "Leadership Team", href: "#" },
-    //         { label: "Academic Staff", href: "#" },
-    //         { label: "Support Staff", href: "#" },
-    //         { label: "Board Members", href: "#" },
-    //         { label: "Advisory Council", href: "#" },
-    //       ],
-    //     },
-    //     {
-    //       label: "Awards",
-    //       href: "#",
-    //       subItems: [
-    //         { label: "Teaching Excellence", href: "#" },
-    //         { label: "Research Recognition", href: "#" },
-    //         { label: "Industry Partnerships", href: "#" },
-    //         { label: "Student Achievements", href: "#" },
-    //         { label: "Community Awards", href: "#" },
-    //       ],
-    //     },
-    //   ],
-    // },
+    {
+      label: "WHY ORANGE",
+      href: "/whyorange",
+    },
     {
       label: "HOW TO APPLY",
       href: "/howtoapply",
-      dropdown: [
-        {
-          label: "Application Process",
-          href: "#",
-          subItems: [
-            { label: "Step-by-Step Guide", href: "#" },
-            { label: "Required Documents", href: "#" },
-            { label: "Application Deadlines", href: "#" },
-            { label: "Entry Requirements", href: "#" },
-            { label: "Assessment Criteria", href: "#" },
-          ],
-        },
-        {
-          label: "Admission Requirements",
-          href: "#",
-          subItems: [
-            { label: "Academic Prerequisites", href: "#" },
-            { label: "English Proficiency", href: "#" },
-            { label: "Portfolio Requirements", href: "#" },
-            { label: "Interview Process", href: "#" },
-            { label: "Special Considerations", href: "#" },
-          ],
-        },
-        {
-          label: "Financial Aid",
-          href: "#",
-          subItems: [
-            { label: "Scholarships", href: "#" },
-            { label: "Student Loans", href: "#" },
-            { label: "Payment Plans", href: "#" },
-            { label: "Work Study Programs", href: "#" },
-            { label: "Emergency Assistance", href: "#" },
-          ],
-        },
-        {
-          label: "International Applications",
-          href: "#",
-          subItems: [
-            { label: "Visa Requirements", href: "#" },
-            { label: "Document Translation", href: "#" },
-            { label: "Health Insurance", href: "#" },
-            { label: "Accommodation Options", href: "#" },
-            { label: "Orientation Programs", href: "#" },
-          ],
-        },
-        {
-          label: "Support Services",
-          href: "#",
-          subItems: [
-            { label: "Application Assistance", href: "#" },
-            { label: "Career Counseling", href: "#" },
-            { label: "Academic Advising", href: "#" },
-            { label: "Student Mentoring", href: "#" },
-            { label: "Disability Support", href: "#" },
-          ],
-        },
-      ],
     },
-    // {
-    //   label: 'COMMUNITY',
-    //   dropdown: [
-    //     {
-    //       label: 'Student Life',
-    //       href: '#',
-    //       subItems: [
-    //         { label: 'Clubs & Societies', href: '#' },
-    //         { label: 'Sports & Recreation', href: '#' },
-    //         { label: 'Cultural Events', href: '#' },
-    //         { label: 'Student Government', href: '#' },
-    //         { label: 'Volunteer Opportunities', href: '#' }
-    //       ]
-    //     },
-    //     {
-    //       label: 'Alumni Network',
-    //       href: '#',
-    //       subItems: [
-    //         { label: 'Alumni Directory', href: '#' },
-    //         { label: 'Networking Events', href: '#' },
-    //         { label: 'Mentorship Program', href: '#' },
-    //         { label: 'Career Services', href: '#' },
-    //         { label: 'Alumni Benefits', href: '#' }
-    //       ]
-    //     },
-    //     {
-    //       label: 'Industry Partnerships',
-    //       href: '#',
-    //       subItems: [
-    //         { label: 'Corporate Partners', href: '#' },
-    //         { label: 'Internship Programs', href: '#' },
-    //         { label: 'Research Collaborations', href: '#' },
-    //         { label: 'Guest Lectures', href: '#' },
-    //         { label: 'Job Placement', href: '#' }
-    //       ]
-    //     },
-    //     {
-    //       label: 'Community Engagement',
-    //       href: '#',
-    //       subItems: [
-    //         { label: 'Local Partnerships', href: '#' },
-    //         { label: 'Community Projects', href: '#' },
-    //         { label: 'Public Lectures', href: '#' },
-    //         { label: 'Outreach Programs', href: '#' },
-    //         { label: 'Social Impact', href: '#' }
-    //       ]
-    //     },
-    //     {
-    //       label: 'Events & News',
-    //       href: '#',
-    //       subItems: [
-    //         { label: 'Upcoming Events', href: '#' },
-    //         { label: 'News & Updates', href: '#' },
-    //         { label: 'Press Releases', href: '#' },
-    //         { label: 'Media Coverage', href: '#' },
-    //         { label: 'Newsletter', href: '#' }
-    //       ]
-    //     }
-    //   ]
-    // },
+
     {
       label: "INFORMATION",
       dropdown: [
         {
-          label: "Academic Information",
+          label: "Student Handbook",
           href: "#",
-          subItems: [
-            { label: "Course Catalog", href: "#" },
-            { label: "Academic Calendar", href: "#" },
-            { label: "Grading System", href: "#" },
-            { label: "Academic Policies", href: "#" },
-            { label: "Graduation Requirements", href: "#" },
-          ],
         },
         {
-          label: "Campus Resources",
+          label: "Forms & Policies",
           href: "#",
-          subItems: [
-            { label: "Library Services", href: "#" },
-            { label: "IT Support", href: "#" },
-            { label: "Health Services", href: "#" },
-            { label: "Counseling Services", href: "#" },
-            { label: "Accessibility Services", href: "#" },
-          ],
+        },
+        {
+          label: "ESOS Framework",
+          href: "#",
+        },
+        {
+          label: "Agent Representatives",
+          href: "#",
         },
       ],
     },
     {
       label: "ENQUIRE  NOW",
-      href: "#contact",
+      href: "/enquiry",
     },
   ];
-
-  const handleMouseEnter = (label: string) => {
-    if (dropdownTimeoutRef.current) {
-      clearTimeout(dropdownTimeoutRef.current);
-    }
-    setActiveDropdown(label);
-  };
-
-  const handleMouseLeave = () => {
-    dropdownTimeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-      setActiveSubDropdown(null);
-    }, 150);
-  };
-
-  const handleSubMouseEnter = (label: string) => {
-    if (subDropdownTimeoutRef.current) {
-      clearTimeout(subDropdownTimeoutRef.current);
-    }
-    setActiveSubDropdown(label);
-  };
-
-  const handleSubMouseLeave = () => {
-    subDropdownTimeoutRef.current = setTimeout(() => {
-      setActiveSubDropdown(null);
-    }, 150);
-  };
 
   useEffect(() => {
     return () => {
@@ -350,6 +153,18 @@ const Header: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest("nav")) {
+        setActiveDropdown(null);
+        setActiveSubDropdown(null);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
   return (
@@ -428,71 +243,108 @@ const Header: React.FC = () => {
             </div>
 
             {/* Desktop Navigation */}
+            {/* Desktop Navigation */}
             <nav className="hidden lg:flex space-x-2">
               {menuItems.map((item) => (
-                <div
-                  key={item.label}
-                  className="relative group"
-                  onMouseEnter={() =>
-                    item.dropdown && handleMouseEnter(item.label)
-                  }
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <a
-                    href={
-                      item.href ||
-                      (item.label === "OUR COURSES" ? "/courses" : "#")
-                    }
-                    className={`font-medium transition-all duration-300 px-4 py-2 rounded-lg hover:bg-orange-50 flex items-center group-hover:shadow-sm ${
-                      scrolled
-                        ? "text-white hover:text-orange-200"
-                        : "text-gray-700 hover:text-orange-600"
-                    }`}
-                  >
-                    {item.label}
-                    {item.dropdown && (
-                      <ChevronDown
-                        className={`ml-1 w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300 ${
-                          scrolled ? "text-white" : "text-gray-700"
+                <div key={item.label} className="relative">
+                  {item.dropdown ? (
+                    <div className="flex items-center">
+                      {/* ✅ Label navigates to its href */}
+                      <Link
+                        to={item.href || "#"}
+                        className={`font-medium transition-all duration-300 px-4 py-2 rounded-lg flex items-center ${
+                          scrolled
+                            ? "text-white hover:text-orange-200"
+                            : "text-gray-700 hover:text-orange-600"
                         }`}
-                      />
-                    )}
-                  </a>
+                        onClick={() => {
+                          // optional: close dropdown when navigating
+                          setActiveDropdown(null);
+                          setActiveSubDropdown(null);
+                        }}
+                      >
+                        {item.label}
+                      </Link>
+
+                      {/* ✅ Separate button only for dropdown toggle */}
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation(); // prevent link click
+                          setActiveDropdown(
+                            activeDropdown === item.label ? null : item.label
+                          );
+                        }}
+                        className="focus:outline-none"
+                      >
+                        <ChevronDown
+                          className={`ml-1 w-4 h-4 transform transition-transform duration-300 ${
+                            activeDropdown === item.label ? "rotate-180" : ""
+                          } ${scrolled ? "text-white" : "text-gray-700"}`}
+                        />
+                      </button>
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href || "#"}
+                      className={`font-medium transition-all duration-300 px-4 py-2 rounded-lg flex items-center ${
+                        scrolled
+                          ? "text-white hover:text-orange-200"
+                          : "text-gray-700 hover:text-orange-600"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+
                   {/* Dropdown */}
                   {item.dropdown && activeDropdown === item.label && (
-                    <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 ease-out">
+                    <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 transition-all duration-300 ease-out">
                       {item.dropdown.map((dropdownItem) => (
-                        <div
-                          key={dropdownItem.label}
-                          className="relative"
-                          onMouseEnter={() =>
-                            dropdownItem.subItems &&
-                            handleSubMouseEnter(dropdownItem.label)
-                          }
-                          onMouseLeave={handleSubMouseLeave}
-                        >
-                          <a
-                            href={dropdownItem.href}
-                            className="block px-4 py-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-colors flex items-center justify-between"
-                          >
-                            {dropdownItem.label}
-                            {dropdownItem.subItems && (
+                        <div key={dropdownItem.label} className="relative">
+                          {dropdownItem.subItems ? (
+                            <button
+                              onClick={() =>
+                                setActiveSubDropdown(
+                                  activeSubDropdown === dropdownItem.label
+                                    ? null
+                                    : dropdownItem.label
+                                )
+                              }
+                              className="w-full text-left block px-4 py-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-colors flex items-center justify-between"
+                            >
+                              {dropdownItem.label}
                               <ChevronRight className="w-4 h-4" />
-                            )}
-                          </a>
+                            </button>
+                          ) : (
+                            <Link
+                              to={dropdownItem.href}
+                              onClick={() => {
+                                setActiveDropdown(null);
+                                setActiveSubDropdown(null);
+                              }}
+                              className="block px-4 py-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-colors"
+                            >
+                              {dropdownItem.label}
+                            </Link>
+                          )}
 
                           {/* Sub-dropdown */}
                           {dropdownItem.subItems &&
                             activeSubDropdown === dropdownItem.label && (
-                              <div className="absolute top-0 left-full ml-1 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 ease-out">
+                              <div className="absolute top-0 left-full ml-1 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 transition-all duration-300 ease-out">
                                 {dropdownItem.subItems.map((subItem) => (
-                                  <a
+                                  <Link
                                     key={subItem.label}
-                                    href={subItem.href}
+                                    to={subItem.href}
+                                    onClick={() => {
+                                      setActiveDropdown(null);
+                                      setActiveSubDropdown(null);
+                                    }}
                                     className="block px-4 py-2 text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-colors text-sm"
                                   >
                                     {subItem.label}
-                                  </a>
+                                  </Link>
                                 ))}
                               </div>
                             )}
