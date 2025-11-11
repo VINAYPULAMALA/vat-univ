@@ -130,7 +130,7 @@ const CoursesPage: React.FC = () => {
                   Explore Our
                   <span className="block text-orange-200">Programs</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-orange-100 mb-8 leading-relaxed">
+                <p className="text-xl md:text-2xl text-orange-100 leading-relaxed">
                   Discover your passion and build your future with our comprehensive range of 
                   industry-focused courses designed for success.
                 </p>

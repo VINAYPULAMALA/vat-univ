@@ -9,6 +9,7 @@ import {
   Plane,
   GraduationCap,
   CheckCircle,
+  Link,
 } from "lucide-react";
 
 const tabs = [
@@ -86,22 +87,22 @@ const tabs = [
             <div className="mt-4 p-4 bg-orange-50 rounded-lg">
               <p className="text-sm text-orange-700">
                 Applications may be rejected at any stage. Contact us at{" "}
-                <a
-                  href="mailto:info@vat.vic.edu.au"
+                <Link
+                  to="mailto:info@vat.vic.edu.au"
                   className="font-semibold underline"
                 >
                   info@vat.vic.edu.au
-                </a>{" "}
+                </Link>{" "}
                 if needed.
               </p>
             </div>
-            <a
-              href="#"
+           <Link
+              to="#"
               className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium"
             >
               Need an English Placement Test? Click here
               <Plane className="ml-2 w-5 h-5" />
-            </a>
+            </Link>
           </div>
           <img
             src="https://images.pexels.com/photos/7684728/pexels-photo-7684728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -158,12 +159,12 @@ const tabs = [
           <div className="mt-8 p-4 bg-orange-50 rounded-lg inline-flex items-center gap-2">
             <Mail className="w-5 h-5 text-orange-600" />
             <span>Email: </span>
-            <a
-              href="mailto:admissions@orange.edu.au"
+           <Link
+              to="mailto:admissions@orange.edu.au"
               className="font-semibold text-orange-600"
             >
               admissions@orange.edu.au
-            </a>
+            </Link>
           </div>
         </div>
       </div>

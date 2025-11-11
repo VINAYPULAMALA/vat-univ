@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import StepTimeline from "./StepTimelineWithIcons";
 import { X, Search, Info, ChevronRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface CourseInfo {
   code: string;
@@ -170,8 +170,8 @@ const handleClick = () => {
                     {detail.isLink && detail.link ? (
                       <span>
                         {detail.value ? detail.value.split("(")[0] : ""}
-                        <a
-                          href={detail.link}
+                        <Link
+                          to={detail.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-orange-600 hover:text-orange-700 font-medium hover:underline transition-all"
@@ -179,7 +179,7 @@ const handleClick = () => {
                           {detail.linkText ||
                             detail.value?.match(/\((.*?)\)/)?.[1] ||
                             "Click here"}
-                        </a>
+                        </Link>
                         {detail.value &&
                           detail.value.includes(")") &&
                           detail.value.split(")")[1]}

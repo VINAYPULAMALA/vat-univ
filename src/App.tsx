@@ -16,6 +16,7 @@ import ManagementLearning from "./pages/ManagementLearning";
 import ApplyOnlinePage from "./pages/Contact";
 import Agent from "./pages/AgentRepresentative";
 import AdmissionsPage from "./pages/Forms";
+import "./index.css";
 function App() {
   return (
     <div className="min-h-screen">
@@ -34,7 +35,7 @@ function App() {
         <Route path="/management-learning" element={<ManagementLearning />} />
         <Route path="/enquiry" element={<ApplyOnlinePage />} />
         <Route path="/agent-representative" element={<Agent />} />
-        <Route path="/forms-and-policies/" element={<AdmissionsPage />} />
+        <Route path="/forms-and-policies" element={<AdmissionsPage />} />
 
       </Routes>
       <Footer />

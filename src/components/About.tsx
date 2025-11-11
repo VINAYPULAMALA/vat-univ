@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface AboutProps {
   title: string;
@@ -45,8 +46,8 @@ const About: React.FC<AboutProps> = ({
                   {para}
                 </p>
               ))}
-              <a
-                href={href}
+              <Link
+                to={href || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-700 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
@@ -65,7 +66,7 @@ const About: React.FC<AboutProps> = ({
                     clipRule="evenodd"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 

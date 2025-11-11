@@ -18,7 +18,7 @@ interface TestEvidenceTableProps {
 // Step Timeline Component
 const StepTimeline: React.FC<StepTimelineProps> = ({ steps }) => {
   return (
-    <div className="max-w-4xl mx-auto mt-12">
+    <div className="max-w-4xl mx-auto mt-12 px-4 sm:px-6">
       <h1 className="text-orange-600 text-2xl py-12 font-bold ">
         Note:{" "}
         <span className="text-gray-900">

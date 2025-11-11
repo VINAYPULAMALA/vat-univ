@@ -112,7 +112,7 @@ const Header: React.FC = () => {
         },
         {
           label: "Forms & Policies",
-          href: "#",
+          href: "/forms-and-policies",
         },
         {
           label: "ESOS Framework",
@@ -184,24 +184,24 @@ const Header: React.FC = () => {
               </div>
             </div>
             <div className="hidden md:flex space-x-6">
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="hover:text-orange-200 transition-all duration-300"
               >
                 Staff Portal
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="hover:text-orange-200 transition-all duration-300"
               >
                 Student Portal
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="hover:text-orange-200 transition-all duration-300"
               >
                 Library
-              </a>
+              </Link>
               <button
                 onClick={() => setShowApplyModal(true)}
                 className="bg-white text-orange-600 px-6 py-1.5 rounded-full text-sm font-medium hover:bg-orange-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
@@ -393,13 +393,13 @@ const Header: React.FC = () => {
             <nav className="px-4 py-4 space-y-2">
               {menuItems.map((item) => (
                 <div key={item.label}>
-                  <a
-                    href={item.href || "#"}
+                  <Link
+                    to={item.href || "#"}
                     className={`block font-medium text-gray-700 hover:text-orange-200 py-3 px-2 border-b border-gray-100 
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </div>
               ))}
               <div className="pt-4 space-y-2">

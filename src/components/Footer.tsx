@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -23,13 +24,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-5">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
-                <a
+                <Link
                   key={index}
-                  href="#"
+                  to="#"
                   className="p-2 bg-gray-800 rounded-full hover:bg-orange-500 hover:scale-110 transition-all duration-300 group"
                 >
                   <Icon className="w-5 h-5 text-gray-300 group-hover:text-white group-hover:-rotate-12 transition-transform" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -42,8 +43,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {['Home', 'Courses', 'Admissions', 'Events', 'News', 'Contact'].map((item, index) => (
                 <li key={index}>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="flex items-center text-gray-400 hover:text-orange-400 group transition-all duration-300"
                   >
                     <span className="w-2 h-[1px] bg-orange-500 opacity-0 group-hover:opacity-100 mr-2 transition-all"></span>
@@ -51,7 +52,7 @@ const Footer = () => {
                     <span className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
                       ↗
                     </span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -71,8 +72,8 @@ const Footer = () => {
                 'Short Courses'
               ].map((item, index) => (
                 <li key={index}>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="flex items-center text-gray-400 hover:text-orange-400 group transition-all duration-300"
                   >
                     <span className="w-2 h-[1px] bg-orange-500 opacity-0 group-hover:opacity-100 mr-2 transition-all"></span>
@@ -80,7 +81,7 @@ const Footer = () => {
                     <span className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
                       ↗
                     </span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -151,13 +152,13 @@ const Footer = () => {
             </div>
             <div className="flex space-x-6">
               {['Privacy Policy', 'Terms of Service', 'Accessibility'].map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href="#"
+                  to="#"
                   className="hover:text-orange-400 transition-colors duration-300 relative before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-px before:bg-orange-400 hover:before:w-full before:transition-all"
                 >
                   {item}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

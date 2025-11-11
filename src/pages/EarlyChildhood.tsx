@@ -6,6 +6,8 @@ import PagesHeader from "../components/PagesHeader";
 import Carpentry_1 from "../../assests/Carpentry_1.png";
 import Carpentry_2 from "../../assests/Carpentry_2.png";
 import Carpentry_3 from "../../assests/Carpentry_3.png";
+import { Link } from "react-router-dom";
+import "../index.css";
 
 interface Unit {
   no: number;
@@ -102,21 +104,21 @@ const EarlyChildhood: React.FC = () => {
 
             <p className="text-gray-700">
               Please refer the following link for further information:
-              <a
-                href="https://www.acecqa.gov.au"
+              <Link
+                to="https://www.acecqa.gov.au"
                 target="_blank"
-                className="text-blue-600 hover:underline"
+                className="text-blue-600 hover:underline word-break"
               >
                 www.acecqa.gov.au
-              </a>
+              </Link>
               <br />
-              <a
-                href="https://training.gov.au/Training/Details/CHC30121"
+              <Link
+                to="https://training.gov.au/Training/Details/CHC30121"
                 target="_blank"
-                className="text-blue-600 hover:underline"
+                className="text-blue-600 hover:underline word-break"
               >
                 https://training.gov.au/Training/Details/CHC30121
-              </a>
+              </Link >
             </p>
           </div>
         </>
@@ -299,9 +301,9 @@ const EarlyChildhood: React.FC = () => {
             undertake the Language, Literacy and Numeracy (LLN) and Digital (D)
             literacy test. For further information on student visa assessment
             levels visit Department of Home Affairs’ website at{" "}
-            <a href="https://www.homeaffairs.gov.au/students/visa-assessment-levels">
+            <Link to="https://www.homeaffairs.gov.au/students/visa-assessment-levels">
               https://www.homeaffairs.gov.au/students/visa-assessment-levels
-            </a>
+            </Link>
           </p>
           <h5 className="text-base font-bold">
             Additionally, the learner is required to:
@@ -500,21 +502,21 @@ const EarlyChildhood: React.FC = () => {
             <p className="text-sm text-gray-700 mb-2">
               ⚠️ <strong>Important Note:</strong> Above pathway information is
               in line with the qualification description on the{" "}
-              <a
-                href="https://training.gov.au"
+              <Link
+                to="https://training.gov.au"
                 target="_blank"
                 className="text-blue-600 underline hover:text-blue-800"
               >
                 National Training Register
-              </a>{" "}
+              </Link>{" "}
               and{" "}
-              <a
-                href="https://www.myskills.gov.au/"
+              <Link
+                to="https://www.myskills.gov.au/"
                 target="_blank"
                 className="text-blue-600 underline hover:text-blue-800"
               >
                 MySkills
-              </a>
+              </Link>
               . It doesn’t imply any job guarantee or job role at the end of the
               course.
             </p>

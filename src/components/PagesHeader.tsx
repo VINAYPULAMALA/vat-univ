@@ -31,7 +31,7 @@ const PagesHeader: React.FC<PagesHeaderProps> = ({
                 {title}
                 <span className="block text-orange-200">{subtitle}</span>
               </h2>
-              <p className="text-xl md:text-2xl text-orange-100 mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-orange-100 leading-relaxed">
                 {description}
               </p>
             </div>
