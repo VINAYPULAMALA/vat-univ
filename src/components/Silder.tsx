@@ -58,7 +58,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   };
 
   return (
-    <div className="slider-container">
+    <div className="slider-container w-full overflow-hidden">
       <Slider {...settings}>
         {items.map((item, index) => (
           <div key={index} className="px-2">

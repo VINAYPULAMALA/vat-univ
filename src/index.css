@@ -30,6 +30,9 @@
   .word-break {
     word-break: break-word;
   }
+  .slick-slide > div {
+  width: 100%;
+}
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
   }
