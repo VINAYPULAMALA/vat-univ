@@ -1,6 +1,7 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { href, Link } from 'react-router-dom';
+import { title } from 'framer-motion/client';
 
 const Footer = () => {
   return (
@@ -41,14 +42,34 @@ const Footer = () => {
               Explore More
             </h3>
             <ul className="space-y-3">
-              {['Home', 'Courses', 'Admissions', 'Events', 'News', 'Contact'].map((item, index) => (
+              {[{
+                title : 'Home',
+                href:'/'
+              },
+              {
+                title : 'Pakage Courses',
+                href:'/courses'
+              },
+              {
+                title : 'Forms and policies',
+                href:'/forms-and-policies'
+              },
+              {
+                title : 'Sign Up as Agent',
+                href:'/agent-representation'
+              },{
+                title : 'Contact Us',
+                href:'/enquiry'
+              }
+            
+            ].map((item, index) => (
                 <li key={index}>
                   <Link
-                    to="#"
+                    to={item.href}
                     className="flex items-center text-gray-400 hover:text-orange-400 group transition-all duration-300"
                   >
                     <span className="w-2 h-[1px] bg-orange-500 opacity-0 group-hover:opacity-100 mr-2 transition-all"></span>
-                    {item}
+                    {item.title}
                     <span className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
                       ↗
                     </span>
@@ -65,19 +86,30 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {[
-                'English Courses Hub',
-                'Business & Management Hub',
-                'Building & Construction Hub',
-                'Community Services Hub',
-                'Short Courses'
+                {
+                title : 'Early Childhood Education and Care',
+                href:'/early-childhood-education'
+              },
+                {
+                title : 'Commercial Cookery',
+                href:'/commercial-cookery'
+              },
+              {
+                title : 'Carpentry',
+                href:'/carpentry'
+              },
+              {
+                title : 'Graduate Diploma of Management',
+                href:'/management-learning'
+              }
               ].map((item, index) => (
                 <li key={index}>
                   <Link
-                    to="#"
+                    to={item.href}
                     className="flex items-center text-gray-400 hover:text-orange-400 group transition-all duration-300"
                   >
                     <span className="w-2 h-[1px] bg-orange-500 opacity-0 group-hover:opacity-100 mr-2 transition-all"></span>
-                    {item}
+                    {item.title}
                     <span className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
                       ↗
                     </span>

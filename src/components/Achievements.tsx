@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trophy, Award, Star, TrendingUp, Users, Globe, Sparkles, GraduationCap } from 'lucide-react';
-
+import { useNavigate } from 'react-router-dom';
 const Achievements: React.FC = () => {
   const achievements = [
     {
@@ -78,7 +78,10 @@ const Achievements: React.FC = () => {
       year: "2022"
     }
   ];
-
+  const navigate = useNavigate();
+const handleClick = () => {
+  navigate("/enquiry");
+};
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-orange-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -184,7 +187,7 @@ const Achievements: React.FC = () => {
             Join a university that's committed to excellence and making a positive impact on the world. 
             Your success is our achievement.
           </p>
-          <button className="bg-gradient-to-r from-orange-600 to-amber-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-orange-700 hover:to-amber-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          <button onClick={handleClick} className="bg-gradient-to-r from-orange-600 to-amber-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-orange-700 hover:to-amber-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
             Apply Now
           </button>
         </div>

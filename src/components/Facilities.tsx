@@ -131,7 +131,7 @@ const Facilities: React.FC = () => {
             </h2>
             <Sparkles className="w-8 h-8 text-amber-400 animate-bounce delay-200" />
           </div>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto flex items-center justify-center">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto  items-center justify-center">
             <Camera className="inline-block w-6 h-6 text-orange-500 mr-2 -mt-1" />
             World-class facilities to support{" "}
             <span className="font-semibold text-orange-600 mx-1">

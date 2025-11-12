@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
   Menu,
@@ -129,7 +129,7 @@ const Header: React.FC = () => {
       href: "/enquiry",
     },
   ];
-
+const navigate = useNavigate();
   useEffect(() => {
     return () => {
       if (dropdownTimeoutRef.current) {
@@ -203,7 +203,9 @@ const Header: React.FC = () => {
                 Library
               </Link>
               <button
-                onClick={() => setShowApplyModal(true)}
+                onClick={() => {
+                  navigate("/enquiry");
+                }}
                 className="bg-white text-orange-600 px-6 py-1.5 rounded-full text-sm font-medium hover:bg-orange-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 Apply Online

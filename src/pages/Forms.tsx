@@ -8,133 +8,133 @@ const DocumentsPage: React.FC = () => {
     {
       title: "Application Form",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Application-Form.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Application-Form.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700 transition-colors"
         >
           <FileDown className="w-4 h-4" /> Download Application Form
-        </Link>
+        </a>
       ),
     },
     {
       title: "Complaints and Appeals Form",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Complaints-and-Appeals-Feedback-Form.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Complaints-and-Appeals-Feedback-Form.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700 transition-colors"
         >
           <FileDown className="w-4 h-4" /> Download Complaints and Appeals Form
-        </Link>
+        </a>
       ),
     },
     {
       title: " Credit Transfer Application Form ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Credit-Transfer-Application-Form.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Credit-Transfer-Application-Form.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700 transition-colors"
         >
           <FileDown className="w-4 h-4" /> Download  Credit Transfer Application Form 
-        </Link>
+        </a>
       ),
     },
     {
       title: " Critical Incident Form ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Critical-Incident-Report-Form.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Critical-Incident-Report-Form.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700 transition-colors"
         >
           <FileSpreadsheet className="w-4 h-4" /> Download Critical Incident Form
-        </Link>
+        </a>
       ),
     },
      {
       title: "  Student Support Request Form   ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Student-Support-Referral-Form.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Student-Support-Referral-Form.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700 transition-colors"
         >
           <FileSpreadsheet className="w-4 h-4" /> Download  Student Support Request Form  
-        </Link>
+        </a>
       ),
     },
      {
       title: "   Fee Extension Request Form   ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Refund-Request-Form.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Refund-Request-Form.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700 transition-colors"
         >
           <FileSpreadsheet className="w-4 h-4" /> Download   Fee Extension Request Form 
-        </Link>
+        </a>
       ),
     },
     {
       title: "   RPL Application Form   ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/11/RPL-APPLICATION-FORM-V1.0.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/11/RPL-APPLICATION-FORM-V1.0.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700 transition-colors"
         >
           <FileSpreadsheet className="w-4 h-4" /> Download  RPL Application Form
-        </Link>
+        </a>
       ),
     },
     {
       title: "   Student Request Form   ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/11/Student-Request-Form-V1.0.pdfs"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/11/Student-Request-Form-V1.0.pdfs"
           target="_blank"
           className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700 transition-colors"
         >
           <FileSpreadsheet className="w-4 h-4" /> Download  Student Refund Request Form
-        </Link>
+        </a>
       ),
     },
     {
       title: "   Suggestion Form    ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Feedback-Form.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Feedback-Form.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700 transition-colors"
         >
           <FileSpreadsheet className="w-4 h-4" /> Download   Suggestion Form  
-        </Link>
+        </a>
       ),
     },
     {
       title: "   Deferral, Suspension, Cancellation of Enrolment or ECOE Change Form   ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/11/DEFERAL-SUSPENSION-CANCELLATION-OF-ENROLMENT-OR-ECOE-CHANGE-FORM-V1.0.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/11/DEFERAL-SUSPENSION-CANCELLATION-OF-ENROLMENT-OR-ECOE-CHANGE-FORM-V1.0.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700 transition-colors"
         >
           <FileSpreadsheet className="w-4 h-4" /> Download   Deferral, Suspension, Cancellation of Enrolment or ECOE Change Form 
-        </Link>
+        </a>
       ),
     },
     {
       title: " Student Refund Request Form  ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Refund-Request-Form.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Refund-Request-Form.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700 transition-colors"
         >
           <FileSpreadsheet className="w-4 h-4" /> Download   Student Refund Request Form
-        </Link>
+        </a>
       ),
     },
   ];
@@ -145,25 +145,25 @@ const DocumentsPage: React.FC = () => {
     {
       title: "Education Agent Application Form",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Agent-application-form-V3.0.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Agent-application-form-V3.0.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download Agent Application Form
-        </Link>
+        </a>
       ),
     },
     {
       title: "Policy and Procedure Manual",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/VATS-Policy-and-Procedure-MANUAL-1.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/VATS-Policy-and-Procedure-MANUAL-1.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> View Policy and Procedure Manual
-        </Link>
+        </a>
       ),
     },
   ];
@@ -173,145 +173,145 @@ const DocumentsPage: React.FC = () => {
     {
       title: "Deferral, Suspension or Cancellation of Student Policy",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Deferral-Suspension-or-Cancellation-Request-Form.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2025/07/Deferral-Suspension-or-Cancellation-Request-Form.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download Deferral, Suspension or Cancellation of Student Policy
-        </Link>
+        </a>
       ),
     },
     {
       title: " Fees, charges and refunds policy and procedure ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Fees-charges-and-refunds-policy-and-procedure.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Fees-charges-and-refunds-policy-and-procedure.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download  Fees, charges and refunds policy and procedure 
-        </Link>
+        </a>
       ),
     },
     {
       title: " Monitoring Student Attendance Policy ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Monitoring-Student-Attendance-Policy.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Monitoring-Student-Attendance-Policy.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download Monitoring Student Attendance Policy
-        </Link>
+        </a>
       ),
     },
     {
       title: "  Plagiarism and Cheating Policy and Procedure  ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Plagiarism-and-Cheating-Policy-and-Procedure.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Plagiarism-and-Cheating-Policy-and-Procedure.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download  Plagiarism and Cheating Policy and Procedure 
-        </Link>
+        </a>
       ),
     },
     {
       title: "  Student Support & Welfare Services Policy and Procedure  ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Student-Support-Welfare-Services-Policy-and-Procedure.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Student-Support-Welfare-Services-Policy-and-Procedure.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download  Student Support & Welfare Services Policy and Procedure 
-        </Link>
+        </a>
       ),
     },
     {
       title: "  Student Progress and Course Progress Policy & Procedure  ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Student-Progress-and-Course-Progress-Policy-Procedure.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Student-Progress-and-Course-Progress-Policy-Procedure.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download  Student Progress and Course Progress Policy & Procedure 
-        </Link>
+        </a>
       ),
     },
     {
       title: "  Access and Equity Policy and Procedure  ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Access-and-Equity-Policy-and-Procedure.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Access-and-Equity-Policy-and-Procedure.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download  Access and Equity Policy and Procedure 
-        </Link>
+        </a>
       ),
     },
     {
       title: "  Access Policy and Procedure  ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Assessment-Policy-and-Procedure.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Assessment-Policy-and-Procedure.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download  Access Policy and Procedure 
-        </Link>
+        </a>
       ),
     },
     {
       title: "  Complaints and Appeals Policy and Procedure  ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Complaints-and-Appeals-Policy-and-Procedure.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Complaints-and-Appeals-Policy-and-Procedure.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download  Complaints and Appeals Policy and Procedure 
-        </Link>
+        </a>
       ),
     },
     {
       title: "  Course Credit Policy and Procedure  ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Course-Credit-Policy-and-Procedure.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Course-Credit-Policy-and-Procedure.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download  Course Credit Policy and Procedure 
-        </Link>
+        </a>
       ),
     },
     {
       title: "  Critical Incidents Policy and Procedure  ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Critical-Incidents-Policy-and-Procedure.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Critical-Incidents-Policy-and-Procedure.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download  Critical Incidents Policy and Procedure 
-        </Link>
+        </a>
       ),
     },
     {
       title: "  Recognition of Prior Learning (RPL) Policy and Procedure  ",
       content: (
-        <Link
-          to="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Recognition-of-Prior-Learning-RPL-Policy-and-Procedure.pdf"
+        <a
+          href="https://www.vat.vic.edu.au/wp-content/uploads/2024/12/Recognition-of-Prior-Learning-RPL-Policy-and-Procedure.pdf"
           target="_blank"
           className="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-700 transition-colors"
         >
           <FileText className="w-4 h-4" /> Download  Recognition of Prior Learning (RPL) Policy and Procedure 
-        </Link>
+        </a>
       ),
     },
   ];
