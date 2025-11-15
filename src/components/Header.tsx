@@ -129,7 +129,7 @@ const Header: React.FC = () => {
       href: "/enquiry",
     },
   ];
-const navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     return () => {
       if (dropdownTimeoutRef.current) {
@@ -225,7 +225,8 @@ const navigate = useNavigate();
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center transform hover:scale-105 transition-transform duration-300 cursor-pointer">
-              <div onClick={() => window.location.href = '/'}
+              <div
+                onClick={() => (window.location.href = "/")}
                 className={`text-3xl font-bold bg-clip-text ${
                   scrolled
                     ? "text-white"
@@ -233,7 +234,7 @@ const navigate = useNavigate();
                 }`}
               >
                 VAT
-              </div>  
+              </div>
               <div
                 className={`ml-2 text-sm border-l-2 border-orange-200 pl-2 ${
                   scrolled ? "text-white border-orange-300" : "text-gray-600"
