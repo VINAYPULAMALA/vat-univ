@@ -170,7 +170,7 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-3">
+      {/* <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-8">
@@ -213,7 +213,7 @@ const Header: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main header */}
       <header
@@ -233,14 +233,14 @@ const Header: React.FC = () => {
                     : "bg-gradient-to-r from-orange-600 to-orange-500 text-transparent"
                 }`}
               >
-                VAT
+                <img src="https://www.vat.vic.edu.au/wp-content/uploads/2024/11/android-icon-192x192-1.png" alt="VAT Logo" className="w-12 h-12" />
               </div>
               <div
                 className={`ml-2 text-sm border-l-2 border-orange-200 pl-2 ${
                   scrolled ? "text-white border-orange-300" : "text-gray-600"
                 }`}
               >
-                <div className="font-semibold">UNIVERSITY</div>
+                <div className="font-semibold">COLLEGE</div>
                 <div className="text-xs tracking-wider">AUSTRALIA</div>
               </div>
             </div>

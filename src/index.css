@@ -12,7 +12,9 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-  
+  .color {
+    color: #2596be;
+  }
   .line-clamp-2 {
     overflow: hidden;
     display: -webkit-box;

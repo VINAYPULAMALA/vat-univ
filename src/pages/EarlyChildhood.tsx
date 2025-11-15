@@ -412,6 +412,91 @@ const EarlyChildhood: React.FC = () => {
         </ul>
       ),
     },
+    {
+      title: "Mode of Delivery",
+      icon: <Globe className="w-6 h-6" />,
+      content: (
+        <>
+         {/* Pathway from Qualification */}
+          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+            <p className="text-gray-600">
+              Classroom Blended including classroom sessions, guided learning,
+              work placement and theory assessments at home and simulated
+              workplace environment.
+            </p>
+          </div>
+
+          {/* Pathway from Qualification */}
+          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+            <h5 className="text-xl font-semibold text-gray-800 mb-2">
+              Delivery Location:
+            </h5>
+            <p className="text-gray-600">
+              395-397, Victoria Street, Abbotsford, VIC 3067
+            </p>
+          </div>
+        </>
+      )
+    },
+    {
+      title: "Pathway from the Qualification",
+      icon: <Globe className="w-6 h-6" />,
+      content: (
+        <>
+         <p className="text-gray-600 mb-3">
+              Learners who successfully complete this qualification may progress
+              into further studies such as:{" "}
+            </p>
+            <p className="text-gray-600 mb-3">
+              CHC50121 – Diploma of Early Childhood Education and Care
+              Employment Pathways Graduates may find employment in the following
+              roles:
+            </p>
+            <ol className="list-decimal list-inside space-y-1 text-gray-700 font-medium">
+              <li>Child Care Worker</li>
+              <li>Nanny/Babysitter</li>
+              <li>Family Day Care Worker</li>
+              <li>Early Childhood Educator</li>
+              <li>Education Support Staff / Teacher Aid</li>
+              <li>Tutor</li>
+            </ol>
+        </>)
+    },
+    {
+          title: "Important Note",
+          icon: <Globe className="w-6 h-6" />,
+          content: (
+            <>
+              <p className="text-sm text-gray-700 mb-2 bg-yellow-50 border-l-4 border-yellow-400 p-5 rounded-lg shadow-sm">
+                ⚠️ <strong>Important Note:</strong> Above pathway information is in
+                line with the qualification description on the{" "}
+                <Link
+                  to="https://training.gov.au"
+                  target="_blank"
+                  className="text-blue-600 underline hover:text-blue-800"
+                >
+                  National Training Register
+                </Link>{" "}
+                and{" "}
+                <Link
+                  to="https://www.myskills.gov.au/"
+                  target="_blank"
+                  className="text-blue-600 underline hover:text-blue-800"
+                >
+                  MySkills
+                </Link>
+                . It doesn’t imply any job guarantee or job role at the end of the
+                course.
+              </p>
+              <p className="text-sm text-gray-700">
+                Vocational Augment Training (VAT) does not claim any employment
+                outcome or guarantee. Please read this information in conjunction
+                with the <span className="font-semibold">Student Handbook</span>{" "}
+                available on this website before making an enrollment decision.
+              </p>
+            </>
+          ),
+        },
   ];
   const carouselItems = [
     <img
@@ -450,84 +535,7 @@ const EarlyChildhood: React.FC = () => {
           courseRequirementSteps={courseRequirementSteps}
           des_code={des_code}
         />
-        <div className="mt-10 space-y-4 container mx-auto p-4">
-          {/* Pathway from Qualification */}
-          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
-            <h5 className="text-xl font-semibold text-gray-800 mb-2">
-              Mode of Delivery:
-            </h5>
-            <p className="text-gray-600">
-              Classroom Blended including classroom sessions, guided learning,
-              work placement and theory assessments at home and simulated
-              workplace environment.
-            </p>
-          </div>
-
-          {/* Pathway from Qualification */}
-          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
-            <h5 className="text-xl font-semibold text-gray-800 mb-2">
-              Delivery Location:
-            </h5>
-            <p className="text-gray-600">
-              395-397, Victoria Street, Abbotsford, VIC 3067
-            </p>
-          </div>
-
-          {/* Employment Pathways */}
-          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
-            <h5 className="text-xl font-semibold text-gray-800 mb-2">
-              Pathway from the Qualification
-            </h5>
-            <p className="text-gray-600 mb-3">
-              Learners who successfully complete this qualification may progress
-              into further studies such as:{" "}
-            </p>
-            <p className="text-gray-600 mb-3">
-              CHC50121 – Diploma of Early Childhood Education and Care
-              Employment Pathways Graduates may find employment in the following
-              roles:
-            </p>
-            <ol className="list-decimal list-inside space-y-1 text-gray-700 font-medium">
-              <li>Child Care Worker</li>
-              <li>Nanny/Babysitter</li>
-              <li>Family Day Care Worker</li>
-              <li>Early Childhood Educator</li>
-              <li>Education Support Staff / Teacher Aid</li>
-              <li>Tutor</li>
-            </ol>
-          </div>
-
-          {/* Disclaimer */}
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-5 rounded-lg shadow-sm">
-            <p className="text-sm text-gray-700 mb-2">
-              ⚠️ <strong>Important Note:</strong> Above pathway information is
-              in line with the qualification description on the{" "}
-              <Link
-                to="https://training.gov.au"
-                target="_blank"
-                className="text-blue-600 underline hover:text-blue-800"
-              >
-                National Training Register
-              </Link>{" "}
-              and{" "}
-              <Link
-                to="https://www.myskills.gov.au/"
-                target="_blank"
-                className="text-blue-600 underline hover:text-blue-800"
-              >
-                MySkills
-              </Link>
-              . It doesn’t imply any job guarantee or job role at the end of the
-              course.
-            </p>
-            <p className="text-sm text-gray-700">
-              Vocational Augment Training (VAT) does not claim any employment
-              outcome or guarantee. Please read this information in conjunction
-              with the <span className="font-semibold">Student Handbook</span>{" "}
-              available on this website before making an enrollment decision.
-            </p>
-          </div>
-        </div>
+       
       </div>
     </>
   );

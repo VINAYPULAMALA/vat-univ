@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ApplyForm from "../components/ApplyForm";
 import { User, Globe } from "lucide-react";
 import { TestEvidenceTable } from "../components/StepTimelineWithIcons";
@@ -500,12 +500,95 @@ const Carpentry: React.FC = () => {
         </ul>
       ),
     },
+    {
+      title: " 🎓 Pathways – From the Qualification",
+      icon: <Globe className="w-6 h-6" />,
+      content: (
+        <p className="text-gray-600">
+          Learners who successfully complete this qualification may progress
+          into{" "}
+          <span className="font-medium">
+            Certificate IV or Diploma qualifications
+          </span>{" "}
+          with other RTOs and universities.
+        </p>
+      ),
+    },
+    {
+      title: "💼 Employment Pathways",
+      icon: <Globe className="w-6 h-6" />,
+      content: (
+        <>
+          <p className="text-gray-600">
+            Graduates may find employment in the Construction Industry as:
+          </p>
+          <ol className="list-decimal list-inside space-y-1 text-gray-700 font-medium">
+            <li>Construction Workers</li>
+            <li>Contractors</li>
+            <li>Project Managers</li>
+            <li>Supervisors</li>
+          </ol>
+        </>
+      ),
+    },
+    {
+      title: "Important Note",
+      icon: <Globe className="w-6 h-6" />,
+      content: (
+        <>
+          <p className="text-sm text-gray-700 mb-2 bg-yellow-50 border-l-4 border-yellow-400 p-5 rounded-lg shadow-sm">
+            ⚠️ <strong>Important Note:</strong> Above pathway information is in
+            line with the qualification description on the{" "}
+            <Link
+              to="https://training.gov.au"
+              target="_blank"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              National Training Register
+            </Link>{" "}
+            and{" "}
+            <Link
+              to="https://www.myskills.gov.au/"
+              target="_blank"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              MySkills
+            </Link>
+            . It doesn’t imply any job guarantee or job role at the end of the
+            course.
+          </p>
+          <p className="text-sm text-gray-700">
+            Vocational Augment Training (VAT) does not claim any employment
+            outcome or guarantee. Please read this information in conjunction
+            with the <span className="font-semibold">Student Handbook</span>{" "}
+            available on this website before making an enrollment decision.
+          </p>
+        </>
+      ),
+    },
   ];
- const carouselItems = [
-  <img src={Carpentry_1} alt="Carpentry 1" className="w-full h-80 md:h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl" key={1} />,
-  <img src={Carpentry_2} alt="Carpentry 2" className="w-full h-80 md:h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl" key={2} />,
-  <img src={Carpentry_3} alt="Carpentry 3" className="w-full h-80 md:h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl" key={3} />,
-];
+  const carouselItems = [
+    <img
+      src={Carpentry_1}
+      alt="Carpentry 1"
+      className="w-full h-80 md:h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+      key={1}
+    />,
+    <img
+      src={Carpentry_2}
+      alt="Carpentry 2"
+      className="w-full h-80 md:h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+      key={2}
+    />,
+    <img
+      src={Carpentry_3}
+      alt="Carpentry 3"
+      className="w-full h-80 md:h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+      key={3}
+    />,
+  ];
+  const [openBox, setOpenBox] = useState<number | null>(null);
+
   return (
     <>
       <PagesHeader
@@ -523,69 +606,6 @@ const Carpentry: React.FC = () => {
           courseRequirementSteps={courseRequirementSteps}
           des_code={des_code}
         />
-        <div className="mt-10 space-y-4 container mx-auto p-4">
-          {/* Pathway from Qualification */}
-          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
-            <h5 className="text-xl font-semibold text-gray-800 mb-2">
-              🎓 Pathways – From the Qualification
-            </h5>
-            <p className="text-gray-600">
-              Learners who successfully complete this qualification may progress
-              into{" "}
-              <span className="font-medium">
-                Certificate IV or Diploma qualifications
-              </span>{" "}
-              with other RTOs and universities.
-            </p>
-          </div>
-
-          {/* Employment Pathways */}
-          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
-            <h5 className="text-xl font-semibold text-gray-800 mb-2">
-              💼 Employment Pathways
-            </h5>
-            <p className="text-gray-600 mb-3">
-              Graduates may find employment in the Construction Industry as:
-            </p>
-            <ol className="list-decimal list-inside space-y-1 text-gray-700 font-medium">
-              <li>Construction Workers</li>
-              <li>Contractors</li>
-              <li>Project Managers</li>
-              <li>Supervisors</li>
-            </ol>
-          </div>
-
-          {/* Disclaimer */}
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-5 rounded-lg shadow-sm">
-            <p className="text-sm text-gray-700 mb-2">
-              ⚠️ <strong>Important Note:</strong> Above pathway information is
-              in line with the qualification description on the{" "}
-              <Link
-                to="https://training.gov.au"
-                target="_blank"
-                className="text-blue-600 underline hover:text-blue-800"
-              >
-                National Training Register
-              </Link>{" "}
-              and{" "}
-              <Link
-                to="https://www.myskills.gov.au/"
-                target="_blank"
-                className="text-blue-600 underline hover:text-blue-800"
-              >
-                MySkills
-              </Link>
-              . It doesn’t imply any job guarantee or job role at the end of the
-              course.
-            </p>
-            <p className="text-sm text-gray-700">
-              Vocational Augment Training (VAT) does not claim any employment
-              outcome or guarantee. Please read this information in conjunction
-              with the <span className="font-semibold">Student Handbook</span>{" "}
-              available on this website before making an enrollment decision.
-            </p>
-          </div>
-        </div>
       </div>
     </>
   );
