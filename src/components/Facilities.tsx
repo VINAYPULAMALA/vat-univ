@@ -113,7 +113,7 @@ const Facilities: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-orange-50 to-white">
+    <section className="py-24 bg-gradient-to-b hidden lg:block from-white via-orange-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <motion.div
